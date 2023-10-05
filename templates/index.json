@@ -66,10 +66,16 @@
             "heading_size": "h1"
           }
         },
+        "957b4551-bee7-471f-937f-3a8048e72f0f": {
+          "type": "html",
+          "settings": {
+            "customhtml": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!\n<\/p>\n<p><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Colorful backpack for all of your new gear<\/p>\n<p><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Treasure Map to collect your monthly badges as your progress through the subscription<\/p>\n<p><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Nature journal to keep track of your drawings and learnings<\/p>\n<p><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Booklet full of activities, games and learning material<\/p>"
+          }
+        },
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!<\/p><ul><li>Colorful backpack for all of your new gear<\/li><li>Treasure Map to collect your monthly badges as your progress through the subscription<\/li><li>Nature journal to keep track of your drawings and learnings<\/li><li>Booklet full of activities, games and learning material<\/li><\/ul>",
+            "text": "",
             "text_style": "body"
           }
         },
@@ -77,13 +83,13 @@
           "type": "button",
           "settings": {
             "button_label": "Get Your First Box",
-            "button_link": "shopify:\/\/products\/example-t-shirt",
-            "button_style_secondary": false
+            "button_link": "shopify:\/\/products\/example-t-shirt"
           }
         }
       },
       "block_order": [
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-heading-1",
+        "957b4551-bee7-471f-937f-3a8048e72f0f",
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-text-1",
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1"
       ],
@@ -104,7 +110,6 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
