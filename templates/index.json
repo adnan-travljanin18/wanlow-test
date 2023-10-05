@@ -1,28 +1,27 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "930f218f-d5f8-4c94-89d5-24eb8fad98a1": {
+      "type": "rich-text",
       "blocks": {
-        "heading": {
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Get Outside!",
-            "heading_size": "h0"
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
           }
         },
-        "text": {
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-text-1": {
           "type": "text",
           "settings": {
-            "text": "Monthly subscription box designed to get kids excited to spend more time outdoors and less time inside with their digital devices!",
-            "text_style": "subtitle"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         },
-        "button": {
-          "type": "buttons",
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-button-1": {
+          "type": "button",
           "settings": {
-            "button_label_1": "Get Started",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -30,151 +29,21 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "custom_css": [
-        "h2 {font-weight: 600;}",
-        "p {font-weight: 600; color: #fff;}",
-        ".button::after {border-radius: 5px;}",
-        ".button::before {border-radius: 5px;}",
-        ".button {border-radius: 5px;}"
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-heading-1",
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-text-1",
+        "template--21251453452602__930f218f-d5f8-4c94-89d5-24eb8fad98a1-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_837.png",
-        "image_2": "shopify:\/\/shop_images\/Group_836.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "107532ba-1101-4dad-836c-056fac481372": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Welcome Box",
-            "heading_size": "h1"
-          }
-        },
-        "957b4551-bee7-471f-937f-3a8048e72f0f": {
-          "type": "html",
-          "settings": {
-            "customhtml": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!\n<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Colorful backpack for all of your new gear<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Treasure Map to collect your monthly badges as your progress through the subscription<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Nature journal to keep track of your drawings and learnings<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Booklet full of activities, games and learning material<\/p>"
-          }
-        },
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get Your First Box",
-            "button_link": "shopify:\/\/products\/example-t-shirt"
-          }
-        }
-      },
-      "block_order": [
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-heading-1",
-        "957b4551-bee7-471f-937f-3a8048e72f0f",
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1"
-      ],
-      "custom_css": [
-        ".image-with-text__media {border: 0;}",
-        "img {object-fit: contain;}",
-        ".button {opacity: 1; border-radius: 5px;}",
-        ".button::after {border-radius: 5px;}",
-        ".button::before {border-radius: 5px;}",
-        ".star-text {display: flex; align-items: center;}",
-        ".star-text span {margin-right: 20px; display: flex;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "d359d6bb-94c0-498d-8b5a-df55f32b4dfb": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_839.png",
-            "title": "1",
-            "text": "<p><strong>Order Your First Box<\/strong><\/p><p>You’ll start with the Welcome Box, followed by 12 amazing boxes to discover<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_838.png",
-            "title": "2",
-            "text": "<p><strong>Delivered To Your Door<\/strong><\/p><p>Check your mailbox monthly<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_840.png",
-            "title": "3",
-            "text": "<p><strong>Get Outside And Have Some Fun!<\/strong><\/p><p>In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-1",
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-2",
-        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-3"
-      ],
-      "custom_css": [
-        ".multicolumn-card {position: relative;}",
-        ".multicolumn-card__info {position: absolute; bottom: 40px; text-align: center; max-width: 280px; padding: 0; left: 40px;}",
-        "h3 {font-size: 60px; color: green; line-height: 40px; transform: rotate(352deg);}",
-        ".multicolumn-card__image-wrapper {margin: 0;}",
-        ".media--portrait {padding-top: 60px;}"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "image_banner",
-    "107532ba-1101-4dad-836c-056fac481372",
-    "d359d6bb-94c0-498d-8b5a-df55f32b4dfb"
+    "930f218f-d5f8-4c94-89d5-24eb8fad98a1"
   ]
 }
