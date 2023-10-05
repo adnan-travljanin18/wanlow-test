@@ -147,6 +147,11 @@
         "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-2",
         "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-3"
       ],
+      "custom_css": [
+        ".multicolumn-card {position: relative;}",
+        ".multicolumn-card {position: relative;}",
+        ".multicolumn-card__info {position: absolute; bottom: 40px; text-align: center; max-width: 280px; padding: 0; left: 40px;}"
+      ],
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
