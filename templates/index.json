@@ -149,7 +149,8 @@
       ],
       "custom_css": [
         ".multicolumn-card {position: relative;}",
-        ".multicolumn-card__info {position: absolute; bottom: 40px; text-align: center; max-width: 280px; padding: 0; left: 40px;}"
+        ".multicolumn-card__info {position: absolute; bottom: 40px; text-align: center; max-width: 280px; padding: 0; left: 40px;}",
+        "h3 {font-size: 60px; line-height: 40px;}"
       ],
       "settings": {
         "title": "Multicolumn",
