@@ -77,7 +77,7 @@
           "type": "button",
           "settings": {
             "button_label": "Get Your First Box",
-            "button_link": "",
+            "button_link": "shopify:\/\/products\/example-t-shirt",
             "button_style_secondary": false
           }
         }
@@ -89,9 +89,9 @@
       ],
       "custom_css": [
         "img {object-fit: contain;}",
-        ".button {opacity: 1; border-radius:5px;}",
-        ".button::after {border-radius:5px}",
-        ".button::before {border-radius:5px}"
+        ".button {opacity: 1; border-radius: 5px;}",
+        ".button::after {border-radius: 5px;}",
+        ".button::before {border-radius: 5px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
