@@ -107,10 +107,67 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "d359d6bb-94c0-498d-8b5a-df55f32b4dfb": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_839.png",
+            "title": "1",
+            "text": "<p><strong>Order Your First Box<\/strong><\/p><p>You’ll start with the Welcome Box, followed by 12 amazing boxes to discover<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_838.png",
+            "title": "2",
+            "text": "<p><strong>Delivered To Your Door<\/strong><\/p><p>Check your mailbox monthly<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_840.png",
+            "title": "3",
+            "text": "<p><strong>Get Outside And Have Some Fun!<\/strong><\/p><p>In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-1",
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-2",
+        "template--21251453452602__d359d6bb-94c0-498d-8b5a-df55f32b4dfb-column-3"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "107532ba-1101-4dad-836c-056fac481372"
+    "107532ba-1101-4dad-836c-056fac481372",
+    "d359d6bb-94c0-498d-8b5a-df55f32b4dfb"
   ]
 }
