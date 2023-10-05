@@ -72,13 +72,6 @@
             "customhtml": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!\n<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Colorful backpack for all of your new gear<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Treasure Map to collect your monthly badges as your progress through the subscription<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Nature journal to keep track of your drawings and learnings<\/p>\n<p class=\"star-text\"><span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\"><\/span>Booklet full of activities, games and learning material<\/p>"
           }
         },
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1": {
           "type": "button",
           "settings": {
@@ -90,7 +83,6 @@
       "block_order": [
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-heading-1",
         "957b4551-bee7-471f-937f-3a8048e72f0f",
-        "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-text-1",
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1"
       ],
       "custom_css": [
@@ -98,8 +90,8 @@
         ".button {opacity: 1; border-radius: 5px;}",
         ".button::after {border-radius: 5px;}",
         ".button::before {border-radius: 5px;}",
-        "ul {list-style-position: outside; padding-left: 0;}",
-        "li {list-style: none; background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930); background-repeat: no-repeat; line-height: 30px; padding-left: 30px;}"
+        ".star-text {display: flex; align-items: center;}",
+        ".star-text span {margin-right: 20px}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
