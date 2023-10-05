@@ -69,7 +69,7 @@
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!<\/p><ul><li>Colorful backpack for all of your new gear<\/li><li>Treasure Map to collect your monthly badges as your progress through the subscription<\/li><li>Nature journal to keep track of your drawings and learnings<\/li><li>Booklet full of activities, games and learning material<\/li><\/ul>",
+            "text": "<p>For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!<\/p><ul><li>&lt;div&gt;Colorful backpack for all of your new gear&lt;\/div&gt;<\/li><li>Treasure Map to collect your monthly badges as your progress through the subscription<\/li><li>Nature journal to keep track of your drawings and learnings<\/li><li>Booklet full of activities, games and learning material<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -92,8 +92,8 @@
         ".button {opacity: 1; border-radius: 5px;}",
         ".button::after {border-radius: 5px;}",
         ".button::before {border-radius: 5px;}",
-        "ul {list-style-position: outside;}",
-        "li {list-style-image: url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930\");}"
+        "ul {list-style-position: outside; padding-left: 0;}",
+        "li {list-style: none; background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0833\/1794\/8730\/files\/star.svg?v=1696502930); background-repeat: no-repeat; line-height: 30px; padding-left: 30px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
