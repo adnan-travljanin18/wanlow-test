@@ -86,12 +86,13 @@
         "template--21251453452602__107532ba-1101-4dad-836c-056fac481372-button-1"
       ],
       "custom_css": [
+        ".image-with-text__media {border: 0;}",
         "img {object-fit: contain;}",
         ".button {opacity: 1; border-radius: 5px;}",
         ".button::after {border-radius: 5px;}",
         ".button::before {border-radius: 5px;}",
         ".star-text {display: flex; align-items: center;}",
-        ".star-text span {margin-right: 20px; display:flex;}"
+        ".star-text span {margin-right: 20px; display: flex;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
