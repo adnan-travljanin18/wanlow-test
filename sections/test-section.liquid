@@ -1,32 +1,36 @@
 <section>
-  {% unless section.settings.image_one == blank %}
-    <img
-      src="{{ section.settings.image_one | image_url: width: 1500 }}"
-      width="300"
-      height="300"
-    >
-  {% endunless %}
-  {% unless section.settings.image_two == blank %}
-    <img
-      src="{{ section.settings.image_two | image_url: width: 1500 }}"
-      width="300"
-      height="300"
-    >
-  {% endunless %}
-  {% unless section.settings.image_three == blank %}
-    <img
-      src="{{ section.settings.image_three | image_url: width: 1500 }}"
-      width="300"
-      height="300"
-    >
-  {% endunless %}
-  <hr>
-  {% if section.blocks.size > 0 %}
-    {% for block in section.blocks %}
-      <h2>H2 : {{ block.settings.text }}</h2>
-    {% endfor %}
-    <hr>
-  {% endif %}
+  <div>
+    {% unless section.settings.image_one == blank %}
+      <div>
+        <img
+          src="{{ section.settings.image_one | image_url: width: 1500 }}"
+          width="300"
+          height="300"
+        >
+        <p>{{ section.settings.text_one }}</p>
+      </div>
+    {% endunless %}
+    {% unless section.settings.image_two == blank %}
+      <div>
+        <img
+          src="{{ section.settings.image_two | image_url: width: 1500 }}"
+          width="300"
+          height="300"
+        >
+        <p>{{ section.settings.text_two }}</p>
+      </div>
+    {% endunless %}
+    {% unless section.settings.image_three == blank %}
+      <div>
+        <img
+          src="{{ section.settings.image_three | image_url: width: 1500 }}"
+          width="300"
+          height="300"
+        >
+        <p>{{ section.settings.text_three }}</p>
+      </div>
+    {% endunless %}
+  </div>
 </section>
 
 {% schema %}
@@ -39,27 +43,29 @@
       "label": "Add first image"
     },
     {
+      "type": "text",
+      "id": "text_one",
+      "label": "Text value"
+    },
+    {
       "type": "image_picker",
       "id": "image_two",
       "label": "Add second image"
     },
     {
+      "type": "text",
+      "id": "text_two",
+      "label": "Text value"
+    },
+    {
       "type": "image_picker",
       "id": "image_three",
       "label": "Add third image"
-    }
-  ],
-  "blocks": [
+    },
     {
       "type": "text",
-      "name": "text",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text value"
-        }
-      ]
+      "id": "text_three",
+      "label": "Text value"
     }
   ],
   "presets": [
