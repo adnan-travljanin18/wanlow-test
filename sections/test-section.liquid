@@ -1,6 +1,6 @@
 <section>
-  {% unless section.settings.text == blank %}
-    <h1>H1 : {{ section.settings.text }}</h1>
+  {% unless section.settings.image == blank %}
+    <h1>{{ section.settings.image }}</h1>
   {% endunless %}
   <hr>
   {% if section.blocks.size > 0 %}
@@ -9,24 +9,22 @@
     {% endfor %}
     <hr>
   {% endif %}
-  {% unless section.blocks[1].settings.text == blank %}
-    <h3>H3 : {{ section.blocks[1].settings.text }}</h3>
-  {% endunless %}
 </section>
+
 {% schema %}
 {
-  "name": "Testing section",
+  "name": "Three Box Images",
   "settings": [
     {
-      "type": "text",
-      "id": "text",
-      "label": "Main text value"
+      "type": "select",
+      "id": "image",
+      "label": "Add image"
     }
   ],
   "blocks": [
     {
-      "type": "item",
-      "name": "Item",
+      "type": "text",
+      "name": "text",
       "settings": [
         {
           "type": "text",
@@ -39,7 +37,7 @@
   "presets": [
     {
       "category": "Content",
-      "name": "Repeatable testing section"
+      "name": "Three Box Section"
     }
   ]
 }
