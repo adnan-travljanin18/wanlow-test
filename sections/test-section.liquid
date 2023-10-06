@@ -1,9 +1,23 @@
 <section>
-  {% unless section.settings.image == blank %}
+  {% unless section.settings.image_one == blank %}
     <img
-      src="{{ section.settings.image | image_url: width: 1500 }}"
-      width="1500"
-      height="1500"
+      src="{{ section.settings.image_one | image_url: width: 1500 }}"
+      width="300"
+      height="300"
+    >
+  {% endunless %}
+  {% unless section.settings.image_two == blank %}
+    <img
+      src="{{ section.settings.image_two | image_url: width: 1500 }}"
+      width="300"
+      height="300"
+    >
+  {% endunless %}
+  {% unless section.settings.image_three == blank %}
+    <img
+      src="{{ section.settings.image_three | image_url: width: 1500 }}"
+      width="300"
+      height="300"
     >
   {% endunless %}
   <hr>
@@ -21,8 +35,18 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Add image"
+      "id": "image_one",
+      "label": "Add first image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_two",
+      "label": "Add second image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_three",
+      "label": "Add third image"
     }
   ],
   "blocks": [
