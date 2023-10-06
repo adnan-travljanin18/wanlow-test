@@ -1,0 +1,46 @@
+<section>
+  {% unless section.settings.text == blank %}
+    <h1>H1 : {{ section.settings.text }}</h1>
+  {% endunless %}
+  <hr>
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      <h2>H2 : {{ block.settings.text }}</h2>
+    {% endfor %}
+    <hr>
+  {% endif %}
+  {% unless section.blocks[1].settings.text == blank %}
+    <h3>H3 : {{ section.blocks[1].settings.text }}</h3>
+  {% endunless %}
+</section>
+{% schema %}
+{
+  "name": "Testing section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Main text value"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text value"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Repeatable testing section"
+    }
+  ]
+}
+{% endschema %}
