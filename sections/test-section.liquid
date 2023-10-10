@@ -1,47 +1,49 @@
 <section>
-  <div>
-    {% unless section.settings.image_one == blank %}
-      <div>
-        <img
-          src="{{ section.settings.image_one | image_url: width: 1500 }}"
-          width="300"
-          height="300"
-        >
-        <div>
-          <h1>{{ section.settings.number_one }}</h1>
-          <h4>{{ section.settings.text_one }}</h4>
-          <p>{{ section.settings.inline_one }}</p>
+  <div class="container">
+    <div class="row">
+      {% unless section.settings.image_one == blank %}
+        <div class="col-4">
+          <img
+            src="{{ section.settings.image_one | image_url: width: 1500 }}"
+            width="300"
+            height="300"
+          >
+          <div>
+            <h1>{{ section.settings.number_one }}</h1>
+            <h4>{{ section.settings.text_one }}</h4>
+            <p>{{ section.settings.inline_one }}</p>
+          </div>
         </div>
-      </div>
-    {% endunless %}
-    {% unless section.settings.image_two == blank %}
-      <div>
-        <img
-          src="{{ section.settings.image_two | image_url: width: 1500 }}"
-          width="300"
-          height="300"
-        >
-        <div>
-          <h1>{{ section.settings.number_two }}</h1>
-          <h4>{{ section.settings.text_two }}</h4>
-          <p>{{ section.settings.inline_two }}</p>
+      {% endunless %}
+      {% unless section.settings.image_two == blank %}
+        <div class="col-4">
+          <img
+            src="{{ section.settings.image_two | image_url: width: 1500 }}"
+            width="300"
+            height="300"
+          >
+          <div>
+            <h1>{{ section.settings.number_two }}</h1>
+            <h4>{{ section.settings.text_two }}</h4>
+            <p>{{ section.settings.inline_two }}</p>
+          </div>
         </div>
-      </div>
-    {% endunless %}
-    {% unless section.settings.image_three == blank %}
-      <div>
-        <img
-          src="{{ section.settings.image_three | image_url: width: 1500 }}"
-          width="300"
-          height="300"
-        >
-        <div>
-          <h1>{{ section.settings.number_three }}</h1>
-          <h4>{{ section.settings.text_three }}</h4>
-          <p>{{ section.settings.inline_three }}</p>
+      {% endunless %}
+      {% unless section.settings.image_three == blank %}
+        <div class="col-4">
+          <img
+            src="{{ section.settings.image_three | image_url: width: 1500 }}"
+            width="300"
+            height="300"
+          >
+          <div>
+            <h1>{{ section.settings.number_three }}</h1>
+            <h4>{{ section.settings.text_three }}</h4>
+            <p>{{ section.settings.inline_three }}</p>
+          </div>
         </div>
-      </div>
-    {% endunless %}
+      {% endunless %}
+    </div>
   </div>
 </section>
 
