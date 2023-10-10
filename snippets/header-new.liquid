@@ -11,7 +11,7 @@
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
             </div>
-            <div class="col-auto row flex-nowrap">
+            <div class="col-auto">
               {% render "get-started" %}
               {%- if shop.customer_accounts_enabled -%}
                 <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="p-0" style="width:25px">
