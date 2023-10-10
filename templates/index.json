@@ -1,5 +1,11 @@
 {
   "sections": {
+    "cd11d879-c9c5-418a-baa7-564d43b267cf": {
+      "type": "header-new",
+      "settings": {
+        "logoImg": "shopify:\/\/shop_images\/Wanlow_Type_Logo_w_Tagline.png"
+      }
+    },
     "bdbcc478-8d18-49d3-a487-ab5589307a63": {
       "type": "test-section",
       "settings": {
@@ -19,6 +25,7 @@
     }
   },
   "order": [
+    "cd11d879-c9c5-418a-baa7-564d43b267cf",
     "bdbcc478-8d18-49d3-a487-ab5589307a63"
   ]
 }
