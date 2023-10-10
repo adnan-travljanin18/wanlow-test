@@ -14,11 +14,11 @@
             <div class="col-auto">
               {% render "get-started" %}
               {%- if shop.customer_accounts_enabled -%}
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="p-0" style="width:25px">
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="p-0">
                   {% render 'icon-account' %}
                 </a>
               {%- endif -%}
-              <a href="{{ routes.cart_url }}" style="width:25px">
+              <a href="{{ routes.cart_url }}">
                 {%- liquid
                   if cart == empty
                     render 'icon-cart-empty'
