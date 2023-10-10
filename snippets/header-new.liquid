@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <div class="row justify-content-between align-items-center py-2">
+        <div class="row justify-content-between align-items-center py-3">
             <div class="col-auto">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
@@ -10,7 +10,24 @@
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
             </div>
             <div class="col-auto">
-              cart
+              <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+                {%- liquid
+                  if cart == empty
+                    render 'icon-cart-empty'
+                  else
+                    render 'icon-cart'
+                  endif
+                -%}
+                <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+                {%- if cart != empty -%}
+                  <div class="cart-count-bubble">
+                    {%- if cart.item_count < 100 -%}
+                      <span aria-hidden="true">{{ cart.item_count }}</span>
+                    {%- endif -%}
+                    <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                  </div>
+                {%- endif -%}
+              </a>
             </div>
         </div>
     </div>
