@@ -16,15 +16,6 @@
               {%- if shop.customer_accounts_enabled -%}
                 <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="p-0" style="width:25px">
                   {% render 'icon-account' %}
-                  <span class="visually-hidden">
-                    {%- liquid
-                      if customer
-                        echo 'customer.account_fallback' | t
-                      else
-                        echo 'customer.log_in' | t
-                      endif
-                    -%}
-                  </span>
                 </a>
               {%- endif -%}
               <a href="{{ routes.cart_url }}" class="p-0" style="width:25px">
