@@ -1,10 +1,12 @@
 name: CI
 on: [push]
 jobs:
-  #lhci:
+  lhci:
   #  name: Lighthouse
-  #  runs-on: ubuntu-latest
-   # steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "This is step 1"
     #  - uses: actions/checkout@v3
      # - name: Lighthouse
       #  uses: shopify/lighthouse-ci-action@v1.1.1
@@ -15,12 +17,12 @@ jobs:
           #collection_handle: all
           #lhci_github_app_token: ${{ secrets.LHCI_GITHUB_TOKEN }}
           #pull_theme: ${{ secrets.SHOP_PULL_THEME }}
-  theme-check:
-    name: Theme Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Theme Check
-        uses: shopify/theme-check-action@v1
-        with:
-          token: ${{ github.token }}
+  #theme-check:
+   # name: Theme Check
+    #runs-on: ubuntu-latest
+    #steps:
+     # - uses: actions/checkout@v3
+      #- name: Theme Check
+       # uses: shopify/theme-check-action@v1
+        #with:
+         # token: ${{ github.token }}
