@@ -11,7 +11,21 @@
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
             </div>
-            <div class="col-auto">
+            <div class="col-auto row">
+              {%- if shop.customer_accounts_enabled -%}
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+                  {% render 'icon-account' %}
+                  <span class="visually-hidden">
+                    {%- liquid
+                      if customer
+                        echo 'customer.account_fallback' | t
+                      else
+                        echo 'customer.log_in' | t
+                      endif
+                    -%}
+                  </span>
+                </a>
+              {%- endif -%}
               <a href="{{ routes.cart_url }}">
                 {%- liquid
                   if cart == empty
