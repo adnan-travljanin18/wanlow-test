@@ -1,14 +1,12 @@
 <section>
     <div class="container">
         <div class="row">
-            {% unless section.block.size > 0 %}
-                <div>
-                    <img src="{{block.settings.first_image}}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size <= 1 %} w-100 col-12{% endif %} col-6">
-                </div>
-                <div>
-                    <img src="" alt="banner-second" width="auto" height="auto" class="col-6">
-                </div>
-            {% endunless %}
+            <div>
+                <img src="{{block.settings.first_image}}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size <= 1 %} w-100 col-12{% endif %} col-6">
+            </div>
+            <div>
+                <img src="" alt="banner-second" width="auto" height="auto" class="col-6">
+            </div>
         </div>
     </div>
 </section>
