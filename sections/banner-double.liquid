@@ -1,12 +1,11 @@
 <section>
     <div class="container">
         <div class="row">
-            <div>
-                <img src="{{ block.settings.image | image_url }}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size < 2 %} w-100 col-12{% endif %} col-6">
+            {% for block in section.blocks %}
+            <div class="col-6">
+                <img src="{{ block.settings.image | image_url }}" alt="Banner" width="auto" height="auto">
             </div>
-            <div>
-                <img src="{{ block.settings.image | image_url }}" alt="banner-second" width="auto" height="auto" class="col-6 w-100">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
