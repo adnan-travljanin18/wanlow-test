@@ -6,6 +6,9 @@
                 <img src="{{ block.settings.image | image_url }}" alt="Banner" width="auto" height="auto">
             </div>
             {% endfor %}
+            {% for block in section.blocks %}
+                Image URL: {{ block.settings.image | json }}
+            {% endfor %}
         </div>
     </div>
 </section>
