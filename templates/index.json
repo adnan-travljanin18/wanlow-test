@@ -1,11 +1,5 @@
 {
   "sections": {
-    "cd11d879-c9c5-418a-baa7-564d43b267cf": {
-      "type": "header-new",
-      "settings": {
-        "logoImg": "shopify:\/\/shop_images\/Wanlow_Type_Logo_w_Tagline.png"
-      }
-    },
     "bdbcc478-8d18-49d3-a487-ab5589307a63": {
       "type": "test-section",
       "settings": {
@@ -22,10 +16,34 @@
         "text_three": "Get Outside And Have Some Fun!",
         "inline_three": "In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors"
       }
+    },
+    "a962a6c9-6bc7-48a8-ad82-656d17f6cf64": {
+      "type": "banner-double",
+      "blocks": {
+        "f8bf0778-4782-4c33-b853-729a994beee4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_837.png"
+          }
+        },
+        "4e9aada5-f009-4bfb-95ca-390009c52ce6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_836.png"
+          }
+        }
+      },
+      "block_order": [
+        "f8bf0778-4782-4c33-b853-729a994beee4",
+        "4e9aada5-f009-4bfb-95ca-390009c52ce6"
+      ],
+      "settings": {
+        "textId": ""
+      }
     }
   },
   "order": [
-    "cd11d879-c9c5-418a-baa7-564d43b267cf",
-    "bdbcc478-8d18-49d3-a487-ab5589307a63"
+    "bdbcc478-8d18-49d3-a487-ab5589307a63",
+    "a962a6c9-6bc7-48a8-ad82-656d17f6cf64"
   ]
 }
