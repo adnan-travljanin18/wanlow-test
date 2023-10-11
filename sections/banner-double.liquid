@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div>
+                <img src="{{block.settings.first_image}}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size <= 1 %} w-100 col-12{% endif %} col-6">
+            </div>
+            <div>
+                <img src="" alt="banner-second" width="auto" height="auto" class="col-6">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{%  schema  %}  
+{
+    "name": "Double Banner",
+    "blocks": [
+    {
+        "name": "First image",
+        "limit": 2,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "first_image",
+                "label": "Add first image"
+            },
+            {
+                "type": "image_picker",
+                "id": "second_image",
+                "label": "Add second image"
+            }
+        ]
+    }
+    ],
+    "presets": [
+    {
+      "category": "Content",
+      "name": "Double Banner"
+    }
+  ]
+}
+{% endschema %}
