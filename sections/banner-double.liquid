@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div>
-                <img src="{{block.settings.first_image}}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size <= 1 %} w-100 col-12{% endif %} col-6">
+                <img src="{{ block.settings.image | image_url }}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size < 2 %} w-100 col-12{% endif %} col-6">
             </div>
             <div>
-                <img src="" alt="banner-second" width="auto" height="auto" class="col-6">
+                <img src="{{ block.settings.image | image_url }}" alt="banner-second" width="auto" height="auto" class="col-6 w-100">
             </div>
         </div>
     </div>
@@ -25,18 +25,13 @@
     "max_blocks": 2,
     "blocks": [
     {
-        "name": "First image",
+        "name": "Image",
         "type": "image",
         "settings": [
             {
                 "type": "image_picker",
-                "id": "first_image",
-                "label": "Add first image"
-            },
-            {
-                "type": "image_picker",
-                "id": "second_image",
-                "label": "Add second image"
+                "id": "image",
+                "label": "Add image"
             }
         ]
     }
