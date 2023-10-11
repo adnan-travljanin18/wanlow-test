@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row">
             {% for block in section.blocks %}
-            <div class="col-6">
-                <img src="{{ block.settings.image | image_url }}" alt="Banner" width="auto" height="auto">
-            </div>
+                <div class="{% if section.blocks.size < 2 %}col-12{% else %}col-6{% endif %}">
+                    <img src="{{ block.settings.image | image_url }}" alt="Banner" width="auto" height="auto">
+                </div>
             {% endfor %}
         </div>
     </div>
