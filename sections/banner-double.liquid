@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             {% for block in section.blocks %}
-                <div class="{% if forloop.index == 1 %} pr-0 {% else %} pl-0 {% endif %}{% if section.blocks.size < 2 %}col-12{% else %}col-6{% endif %}">
+                <div class="{% if section.blocks.size < 2 %}col-12{% else %}col-6{% endif %}{% if forloop.index == 1 %}pr-0 {% else %}pl-0 {% endif %}">
                     <img src="{{ block.settings.image | image_url }}" alt="Banner" width="100%" height="auto">
                 </div>
             {% endfor %}
