@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div>
-                <img src="{{ block.settings.image | image_url }}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size < 2 %} w-100 col-12{% endif %} col-6">
+                <img src="{{ blocks.settings.image | image_url }}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size < 2 %} w-100 col-12{% endif %} col-6">
             </div>
             <div>
-                <img src="{{ block.settings.image | image_url }}" alt="banner-second" width="auto" height="auto" class="col-6 w-100">
+                <img src="{{ blocks.settings.image | image_url }}" alt="banner-second" width="auto" height="auto" class="col-6 w-100">
             </div>
         </div>
     </div>
@@ -16,11 +16,11 @@
 {
     "name": "Double Banner",
     "settings": [
-        {
-            "type": "text",
-            "id": "textId",
-            "label": "Text"
-        }
+    {
+        "type": "text",
+        "id": "textId",
+        "label": "Text"
+    }
     ],
     "max_blocks": 2,
     "blocks": [
