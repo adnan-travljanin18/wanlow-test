@@ -25,10 +25,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_837.png"
           }
+        },
+        "bb959648-8b52-4afb-bb9f-619cab3693b7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_836.png"
+          }
         }
       },
       "block_order": [
-        "f8bf0778-4782-4c33-b853-729a994beee4"
+        "f8bf0778-4782-4c33-b853-729a994beee4",
+        "bb959648-8b52-4afb-bb9f-619cab3693b7"
       ],
       "settings": {
         "textId": ""
