@@ -12,12 +12,13 @@
 </section>
 
 
-{%  schema  %}
+{% schema %}
 {
     "name": "Double Banner",
     "settings": [
         {
             "type": "text",
+            "id": "textId",
             "label": "Text"
         }
     ],
@@ -25,6 +26,7 @@
     "blocks": [
     {
         "name": "First image",
+        "type": "image",
         "settings": [
             {
                 "type": "image_picker",
