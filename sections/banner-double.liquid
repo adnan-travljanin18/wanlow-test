@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="row">
-            {% unless section.blocks.limit > 0 %}
+            {% unless section.block.size > 0 %}
                 <div>
                     <img src="{{block.settings.first_image}}" alt="banner-first" width="auto" height="auto" class="{% if section.block.size <= 1 %} w-100 col-12{% endif %} col-6">
                 </div>
