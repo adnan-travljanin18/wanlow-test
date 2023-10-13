@@ -1,11 +1,14 @@
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row position-relative ">
             {% for block in section.blocks %}
                 <div class="{% if section.blocks.size < 2 %}col-12{% else %}col-6{% endif %} {% if forloop.index == 1 %}col-6-first{% else %}col-6-second{% endif %}">
                     <img src="{{ block.settings.image | image_url }}" alt="Banner" width="100%" height="auto">
                 </div>
             {% endfor %}
+            <div class="position-absolute">
+                text
+            </div>
         </div>
     </div>
 </section>
