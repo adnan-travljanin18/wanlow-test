@@ -38,7 +38,10 @@
         "bb959648-8b52-4afb-bb9f-619cab3693b7"
       ],
       "settings": {
-        "textId": ""
+        "heading": "Get Outside!",
+        "subtext": "Monthly subscription box designed to get kids excited to spend more time outdoors and less time inside with their digital devices!",
+        "button_label": "Get Started",
+        "button_link": "shopify:\/\/products\/example-t-shirt"
       }
     }
   },
