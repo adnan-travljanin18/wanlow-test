@@ -1,0 +1,78 @@
+<section>
+    <div>
+        <div>
+            <div>
+                image
+            </div>
+            <div>
+                text
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Image with text",
+    "settings": [
+    {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Title",
+        "default": "The Welcome Box"
+    },
+    {
+        "type": "image_picker",
+        "id": "three_stars",
+        "label": "Image Decoration",
+    },
+    {
+        "type": "textarea",
+        "id": "section_text",
+        "label": "Description",
+        "default": "Lorem Impsum..."
+    }
+    ],
+    "blocks": [
+    {
+        "name": "List Item",
+        "type": "list_item",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "list_decoration",
+                "label": "Add decoration icon"
+            },
+            {
+                "type": "text",
+                "id": "list_item",
+                "label": "Add list item"
+            }
+        ]
+    },
+    {
+        "name": "Button",
+        "type": "button",
+        "settings": [
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button label"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button Link"
+            }
+        ]
+    }
+    ],
+    "presets": [
+    {
+      "category": "Content",
+      "name": "Custom Image with Text"
+    }
+  ]
+} 
+{% endschema %}
