@@ -7,11 +7,11 @@
                 <div>
                     {% for block in section.blocks %} 
                         <div>
-                            <p><span> <img src="{{ block[0].settings.list_decoration |  image_url }}" alt="star"></span> {{ block.settings.list_item }} </p>
+                            <p><span> <img src="{{ block.settings.list_decoration |  image_url }}" alt="star"></span> {{ block.settings.list_item }} </p>
                         </div>
                     {% endfor %}
-                    <a href="{{ block[1].settings.button_link }}">
-                        <button> {{ block[1].settings.button_text }} </button>
+                    <a href="{{ block.settings.button_link }}">
+                        <button> {{ block.settings.button_text }} </button>
                     </a>
                 </div>
             </div>
