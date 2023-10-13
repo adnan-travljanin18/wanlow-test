@@ -7,7 +7,15 @@
                 </div>
             {% endfor %}
             <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-                text
+                <h1>
+                    {{ section.settings.heading }}
+                </h1>
+                <p>
+                    {{ section.settings.subtext }}
+                </p>
+                <button onclick="window.location.href='{{ section.settings.button_link }}'">
+                    {{ section.settings.button_label }}
+                </button>
             </div>
         </div>
     </div>
@@ -29,8 +37,23 @@
     "settings": [
     {
         "type": "text",
-        "id": "text",
-        "label": "Text"
+        "id": "heading",
+        "label": "Title"
+    },
+    {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtitle"
+    },
+    {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
     }
     ],
     "max_blocks": 2,
