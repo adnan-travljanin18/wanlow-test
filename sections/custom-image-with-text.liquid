@@ -1,10 +1,21 @@
 <section>
     <div>
         <div>
-            <div>
-                image
+            <div class="col-6">
+                <h1>{{ section.settings.section_heading }}<span><img src="{{ section.settings.three_stars |  image_url }}" alt="three stars"></span></h1>
+                <p>{{ section.settings.section_text }}</p>
+                <div>
+                    {% for block in section.blocks %} 
+                        <div>
+                            <p><span> <img src="{{ block[0].settings.list_decoration |  image_url }}" alt="star"></span> {{ block.settings.list_item }} </p>
+                        </div>
+                    {% endfor %}
+                    <a href="{{ block[1].settings.button_link }}">
+                        <button> {{ block[1].settings.button_text }} </button>
+                    </a>
+                </div>
             </div>
-            <div>
+            <div class="col-6">
                 text
             </div>
         </div>
@@ -25,7 +36,7 @@
     {
         "type": "image_picker",
         "id": "three_stars",
-        "label": "Image Decoration"
+        "label": "Icon Decoration"
     },
     {
         "type": "textarea",
@@ -34,6 +45,7 @@
         "default": "Lorem Impsum..."
     }
     ],
+    "max_blocks": 5,
     "blocks": [
     {
         "name": "List Item",
