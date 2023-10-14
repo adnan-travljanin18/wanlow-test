@@ -13,4 +13,5 @@ var swiper = new Swiper(".testimonial-slider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    loop: true,
   });
