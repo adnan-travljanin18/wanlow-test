@@ -96,11 +96,43 @@
         "three_stars": "shopify:\/\/shop_images\/star.svg",
         "section_text": "For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!"
       }
+    },
+    "f796e41c-f720-420c-a0c3-34ecbcc93e56": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "28a40431-1de6-4a7c-bf76-f362cf413c74": {
+          "type": "slide",
+          "settings": {
+            "slide_content": "Test1"
+          }
+        },
+        "2de58ed5-fd75-48ba-b997-9563e025f763": {
+          "type": "slide",
+          "settings": {
+            "slide_content": "Test2"
+          }
+        },
+        "664df6a6-abb4-4f5c-92d4-141fae713275": {
+          "type": "slide",
+          "settings": {
+            "slide_content": "Test"
+          }
+        }
+      },
+      "block_order": [
+        "28a40431-1de6-4a7c-bf76-f362cf413c74",
+        "2de58ed5-fd75-48ba-b997-9563e025f763",
+        "664df6a6-abb4-4f5c-92d4-141fae713275"
+      ],
+      "settings": {
+        "section_heading": ""
+      }
     }
   },
   "order": [
     "bdbcc478-8d18-49d3-a487-ab5589307a63",
     "a962a6c9-6bc7-48a8-ad82-656d17f6cf64",
-    "a747d57c-2853-4378-852c-f774c5025b6e"
+    "a747d57c-2853-4378-852c-f774c5025b6e",
+    "f796e41c-f720-420c-a0c3-34ecbcc93e56"
   ]
 }
