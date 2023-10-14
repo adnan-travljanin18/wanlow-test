@@ -4,18 +4,23 @@
       <div class="col-6">
         <h1>{{ section.settings.section_heading }}<span><img src="{{ section.settings.three_stars | image_url }}" alt="three stars"></span></h1>
         <p>{{ section.settings.section_text }}</p>
-          <div>
-            <!-- Loop through blocks -->
-            {% for block in section.blocks %}
-                <div>
-                    <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
-                </div>
-            {% endfor %}
-            <!-- End block loop -->
+        
+        <!-- Loop through blocks -->
+        {% for block in section.blocks %}
+          {% if block.settings.list_decoration != blank and block.settings.list_item != blank %}
+            <div>
+              <div>
+                <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
+              </div>
+            </div>
+          {% endif %}
+          {% if block.settings.button_text != blank and block.settings.button_link != blank %}
             <a href="{{ block.settings.button_link }}">
               <button>{{ block.settings.button_text }}</button>
             </a>
-          </div>
+          {% endif %}
+        {% endfor %}
+        <!-- End block loop -->
 
       </div>
       <div class="col-6">
@@ -24,6 +29,7 @@
     </div>
   </div>
 </section>
+
 
 
 {% schema %}
