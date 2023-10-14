@@ -7,18 +7,18 @@
         
         <!-- Loop through blocks -->
         {% for block in section.blocks %}
-          {% if block.settings.list_decoration != blank and block.settings.list_item != blank %}
+          {% unless block.settings.list_decoration == blank or block.settings.list_item == blank %}
             <div>
               <div>
                 <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
               </div>
             </div>
-          {% endif %}
-          {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          {% endunless %}
+          {% unless block.settings.button_text == blank or block.settings.button_link == blank %}
             <a href="{{ block.settings.button_link }}">
               <button>{{ block.settings.button_text }}</button>
             </a>
-          {% endif %}
+          {% endunless %}
         {% endfor %}
         <!-- End block loop -->
 
@@ -29,71 +29,3 @@
     </div>
   </div>
 </section>
-
-
-
-{% schema %}
-{
-    "name": "Image with text",
-    "settings": [
-    {
-        "type": "text",
-        "id": "section_heading",
-        "label": "Title",
-        "default": "The Welcome Box"
-    },
-    {
-        "type": "image_picker",
-        "id": "three_stars",
-        "label": "Icon Decoration"
-    },
-    {
-        "type": "textarea",
-        "id": "section_text",
-        "label": "Description",
-        "default": "Lorem Impsum..."
-    }
-    ],
-    "max_blocks": 5,
-    "blocks": [
-    {
-        "name": "List Item",
-        "type": "list_item",
-        "settings": [
-            {
-                "type": "image_picker",
-                "id": "list_decoration",
-                "label": "Add decoration icon"
-            },
-            {
-                "type": "text",
-                "id": "list_item",
-                "label": "Add list item"
-            }
-        ]
-    },
-    {
-        "name": "Button",
-        "type": "button",
-        "settings": [
-            {
-                "type": "text",
-                "id": "button_text",
-                "label": "Button label"
-            },
-            {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button Link"
-            }
-        ]
-    }
-    ],
-    "presets": [
-    {
-      "category": "Content",
-      "name": "Custom Image with Text"
-    }
-  ]
-} 
-{% endschema %}
