@@ -1,6 +1,6 @@
 <section>
-  <div>
-    <div>
+  <div class="container">
+    <div class="row">
       <div class="col-6">
         <h1>{{ section.settings.section_heading }}<span><img src="{{ section.settings.three_stars | image_url }}" alt="three stars"></span></h1>
         <p>{{ section.settings.section_text }}</p>
@@ -24,7 +24,7 @@
 
       </div>
       <div class="col-6">
-        text
+        <img src="{{ section.settings.image |  image_url  }}" alt="Big Image">
       </div>
     </div>
   </div>
@@ -36,6 +36,11 @@
 {
     "name": "Image with text",
     "settings": [
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image",
+    },
     {
         "type": "text",
         "id": "section_heading",
