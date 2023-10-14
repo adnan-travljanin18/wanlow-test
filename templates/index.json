@@ -43,10 +43,63 @@
         "button_label": "Get Started",
         "button_link": "shopify:\/\/products\/example-t-shirt"
       }
+    },
+    "a747d57c-2853-4378-852c-f774c5025b6e": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "e7f53292-fbb1-4ca3-ad98-05bac70b6373": {
+          "type": "list_item",
+          "settings": {
+            "list_decoration": "shopify:\/\/shop_images\/star.svg",
+            "list_item": "Test"
+          }
+        },
+        "a81475a1-4ce4-4ebd-b73b-76093ef24130": {
+          "type": "list_item",
+          "settings": {
+            "list_decoration": "shopify:\/\/shop_images\/star.svg",
+            "list_item": "Test"
+          }
+        },
+        "64797411-785e-4297-b54a-652cbe1515ae": {
+          "type": "list_item",
+          "settings": {
+            "list_decoration": "shopify:\/\/shop_images\/star.svg",
+            "list_item": "Test"
+          }
+        },
+        "c55465c2-9122-4e87-bd05-309a12ba2b37": {
+          "type": "list_item",
+          "settings": {
+            "list_decoration": "shopify:\/\/shop_images\/star.svg",
+            "list_item": "Test"
+          }
+        },
+        "36c1f736-02bd-4a40-a921-176dfe741a5e": {
+          "type": "button",
+          "settings": {
+            "button_text": "Test",
+            "button_link": "shopify:\/\/products\/example-t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "e7f53292-fbb1-4ca3-ad98-05bac70b6373",
+        "a81475a1-4ce4-4ebd-b73b-76093ef24130",
+        "64797411-785e-4297-b54a-652cbe1515ae",
+        "c55465c2-9122-4e87-bd05-309a12ba2b37",
+        "36c1f736-02bd-4a40-a921-176dfe741a5e"
+      ],
+      "settings": {
+        "section_heading": "The Welcome Box",
+        "three_stars": "shopify:\/\/shop_images\/star.svg",
+        "section_text": "For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!"
+      }
     }
   },
   "order": [
     "bdbcc478-8d18-49d3-a487-ab5589307a63",
-    "a962a6c9-6bc7-48a8-ad82-656d17f6cf64"
+    "a962a6c9-6bc7-48a8-ad82-656d17f6cf64",
+    "a747d57c-2853-4378-852c-f774c5025b6e"
   ]
 }
