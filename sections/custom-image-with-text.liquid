@@ -5,9 +5,13 @@
         <h1>{{ section.settings.section_heading }}<span><img src="{{ section.settings.three_stars | image_url }}" alt="three stars"></span></h1>
         <p>{{ section.settings.section_text }}</p>
           <div>
-            <div>
-                <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
-            </div>
+            <!-- Loop through blocks -->
+            {% for block in section.blocks %}
+                <div>
+                    <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
+                </div>
+            {% endfor %}
+            <!-- End block loop -->
             <a href="{{ block.settings.button_link }}">
               <button>{{ block.settings.button_text }}</button>
             </a>
