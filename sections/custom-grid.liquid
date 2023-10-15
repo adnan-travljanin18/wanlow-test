@@ -13,6 +13,14 @@
 
 <section>
     <div class="container">
+        <div class="headline text-center">
+            <h1>
+                {{ section.settings.title }}
+            </h1>
+            <p>
+                {{ section.settings.subtitle }}
+            </p>
+        </div>
         <div class="container custom-grid-section">
             <div class="row">
                 <div class="col-8 column-padding-right">
@@ -50,6 +58,16 @@
   "name": "Custom Grid Section",
   "settings": [
     {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
       "type": "image_picker",
       "id": "image1",
       "label": "Image 1"
@@ -57,7 +75,7 @@
     {
       "type": "text",
       "id": "text2",
-      "label": "Text Content"
+      "label": "Box Text"
     },
     {
       "type": "text",
