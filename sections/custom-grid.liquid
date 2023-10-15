@@ -2,6 +2,12 @@
     .custom-grid-section img {
         padding: 10px;
     }
+    .custom-grid-section .column-padding-right {
+        padding-right: 0;
+    }
+    .custom-grid-section .column-padding-left {
+        padding-left: 0;
+    }
 </style>
 
 
@@ -9,7 +15,7 @@
     <div class="container">
         <div class="container custom-grid-section">
             <div class="row">
-                <div class="col-8 pr-0">
+                <div class="col-8 column-padding-right">
                     <div class="d-flex">
                         <div class="w-100">
                             <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
@@ -26,7 +32,7 @@
                     </div>
 
                 </div>
-                <div class="col-4 pl-0">
+                <div class="col-4 column-padding-left">
                     <div>
                         <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid w-100">
                     </div>
