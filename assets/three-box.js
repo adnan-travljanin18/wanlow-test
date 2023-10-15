@@ -7,11 +7,14 @@ var swiper = new Swiper('.swiper-container', {
     allowSlidePrev: false, // Disable slide navigation on desktop
     allowSlideNext: false, // Disable slide navigation on desktop
     breakpoints: {
-      768: {
-        slidesPerView: 2, // 2 blocks per view on tablets
-      },
-      576: {
-        slidesPerView: 1.5, // 1.5 blocks per view on mobile
+        1024: {
+          slidesPerView: 3, // 3 blocks per view on desktop
+        },
+        768: {
+          slidesPerView: 2, // 2 blocks per view on tablets
+        },
+        576: {
+          slidesPerView: 1.5, // 1.5 blocks per view on mobile
+        }
       }
-    }
   });
