@@ -1,115 +1,69 @@
 <section>
   <div class="container">
     <div class="row">
-      {% unless section.settings.image_one == blank %}
-        <div class="col-4">
-          <img
-            src="{{ section.settings.image_one | image_url: width: 1500 }}"
-            width="300"
-            height="300"
-          >
-          <div>
-            <h1>{{ section.settings.number_one }}</h1>
-            <h4>{{ section.settings.text_one }}</h4>
-            <p>{{ section.settings.inline_one }}</p>
+      <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.alt }}">
+            <div class="content">
+              <h2>{{ forloop.index }}</h2>
+              <p>Index Number: {{ forloop.index }}</p>
+              <h3>{{ block.settings.headline }}</h3>
+              <p>{{ block.settings.subtitle }}</p>
+            </div>
           </div>
-        </div>
-      {% endunless %}
-      {% unless section.settings.image_two == blank %}
-        <div class="col-4">
-          <img
-            src="{{ section.settings.image_two | image_url: width: 1500 }}"
-            width="300"
-            height="300"
-          >
-          <div>
-            <h1>{{ section.settings.number_two }}</h1>
-            <h4>{{ section.settings.text_two }}</h4>
-            <p>{{ section.settings.inline_two }}</p>
-          </div>
-        </div>
-      {% endunless %}
-      {% unless section.settings.image_three == blank %}
-        <div class="col-4">
-          <img
-            src="{{ section.settings.image_three | image_url: width: 1500 }}"
-            width="300"
-            height="300"
-          >
-          <div>
-            <h1>{{ section.settings.number_three }}</h1>
-            <h4>{{ section.settings.text_three }}</h4>
-            <p>{{ section.settings.inline_three }}</p>
-          </div>
-        </div>
-      {% endunless %}
+        {% endfor %}
+      </div>
+
+      <!-- Add pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Add navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
+
+<script src="{{ 'three-box.js' | asset_url }}"></script>
 
 {% schema %}
 {
   "name": "Three Box Images",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "image_one",
-      "label": "Add first image"
-    },
-    {
       "type": "text",
-      "id": "number_one",
-      "label": "Number"
-    },
+      "id": "section_title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "id": "text_one",
-      "label": "Text value"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "inline_one",
-      "label": "Rich Text"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_two",
-      "label": "Add second image"
-    },
-    {
-      "type": "text",
-      "id": "number_two",
-      "label": "Number"
-    },
-    {
-      "type": "text",
-      "id": "text_two",
-      "label": "Text value"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "inline_two",
-      "label": "Rich Text"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_three",
-      "label": "Add third image"
-    },
-    {
-      "type": "text",
-      "id": "number_three",
-      "label": "Number"
-    },
-    {
-      "type": "text",
-      "id": "text_three",
-      "label": "Text value"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "inline_three",
-      "label": "Rich Text"
+      "type": "swiper_block",
+      "name": "Swiper Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "headline",
+          "label": "Headline"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
     }
   ],
   "presets": [
