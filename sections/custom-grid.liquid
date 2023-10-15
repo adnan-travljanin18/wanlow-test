@@ -1,7 +1,22 @@
 <style>
         /* Add custom styles for Masonry */
         .grid-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Adjust the margin as needed */
+        }
+        .text-box {
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+        .custom-image {
+            width: 100%;
+            height: auto;
+        }
+        .custom-image-2 {
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+        }
+        .custom-image-3 {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
         }
     </style>
 
@@ -10,7 +25,7 @@
             <div class="container custom-grid-section">
                 <div class="row" id="card-container1" data-masonry='{"percentPosition": true }'>
                     <div class="grid-item col-md-4">
-                        <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+                        <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid custom-image">
                     </div>
 
                     <div class="grid-item col-md-4">
@@ -21,22 +36,59 @@
                     </div>
 
                     <div class="grid-item col-md-4">
-                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
+                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid custom-image-2">
                     </div>
                 </div>
 
                 <div class="row" id="card-container2" data-masonry='{"percentPosition": true }'>
-                    <div class="grid-item col-md-6">
-                        <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                    <div class="grid-item col-md-12">
+                        <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid custom-image-3">
                     </div>
+                </div>
 
-                    <div class="grid-item col-md-6">
-                        <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
+                <div class="row" id="card-container3" data-masonry='{"percentPosition": true }'>
+                    <div class="grid-item col-md-12">
+                        <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid custom-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize Masonry for the first row
+            var $grid1 = $('#card-container1').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item'
+            });
+            $grid1.imagesLoaded().progress(function () {
+                $grid1.masonry('layout');
+            });
+
+            // Initialize Masonry for the second row
+            var $grid2 = $('#card-container2').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item'
+            });
+            $grid2.imagesLoaded().progress(function () {
+                $grid2.masonry('layout');
+            });
+
+            // Initialize Masonry for the third row
+            var $grid3 = $('#card-container3').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item'
+            });
+            $grid3.imagesLoaded().progress(function () {
+                $grid3.masonry('layout');
+            });
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
