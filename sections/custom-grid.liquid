@@ -18,13 +18,9 @@
             display: block;
         }
 
-        .custom-grid-section .col-md-4:nth-child(2) img {
-            height: 200px; /* Adjust the height of the second image */
-        }
-
         .custom-grid-section .col-md-4:nth-child(3) img {
-            width: 100px; /* Adjust the width of the third image */
-            height: 150px; /* Adjust the height of the third image */
+            width: 100%;
+            height: auto;
         }
 
         .text-box {
@@ -35,36 +31,36 @@
         }
     </style>
 
-<section>
-    <div class="container">
-        <div class="container custom-grid-section">
-            <div class="col-md-4">
-                <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
-            </div>
+    <section>
+        <div class="container">
+            <div class="container custom-grid-section">
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+                </div>
 
-            <div class="col-md-4">
-                <div class="text-box">
-                    <p>{{ section.settings.text2 }}</p>
-                    <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
+                <div class="col-md-4">
+                    <div class="text-box">
+                        <p>{{ section.settings.text2 }}</p>
+                        <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
+            <div class="container custom-grid-section">
+                <div class="col-md-8">
+                    <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
+                </div>
             </div>
         </div>
-
-        <div class="container custom-grid-section">
-            <div class="col-md-8">
-                <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
-            </div>
-
-            <div class="col-md-4">
-                <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 {%  schema  %} 
 {
