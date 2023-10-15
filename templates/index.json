@@ -29,19 +29,41 @@
     },
     "bdbcc478-8d18-49d3-a487-ab5589307a63": {
       "type": "test-section",
+      "blocks": {
+        "4e067bad-5834-4f4d-9116-395ad82bb8be": {
+          "type": "swiper_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_840.png",
+            "alt": "",
+            "headline": "",
+            "subtitle": ""
+          }
+        },
+        "6fc92c20-561e-4aaf-a8fb-bcbe26a1d789": {
+          "type": "swiper_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_838.png",
+            "alt": "",
+            "headline": "",
+            "subtitle": ""
+          }
+        },
+        "69d23573-5c25-4df8-bb3e-6345798746c4": {
+          "type": "swiper_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_839.png",
+            "alt": "",
+            "headline": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "4e067bad-5834-4f4d-9116-395ad82bb8be",
+        "6fc92c20-561e-4aaf-a8fb-bcbe26a1d789",
+        "69d23573-5c25-4df8-bb3e-6345798746c4"
+      ],
       "settings": {
-        "image_one": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
-        "number_one": "1",
-        "text_one": "Order Your First Box",
-        "inline_one": "You’ll start with the Welcome Box, followed by 12 amazing boxes to discover",
-        "image_two": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
-        "number_two": "2",
-        "text_two": "Delivered To Your Door",
-        "inline_two": "Check your mailbox monthly",
-        "image_three": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
-        "number_three": "3",
-        "text_three": "Get Outside And Have Some Fun!",
-        "inline_three": "In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors"
       }
     },
     "a747d57c-2853-4378-852c-f774c5025b6e": {
