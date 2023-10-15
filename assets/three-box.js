@@ -15,7 +15,8 @@ function initializeSwiper() {
       spaceBetween: 30,
       grabCursor: true,
       simulateTouch: true,
-      touchRatio: 0.5
+      touchRatio: 0.5,
+      direction: 'horizontal'
     });
   }
 
