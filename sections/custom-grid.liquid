@@ -1,7 +1,6 @@
 <style>
-    .column {
-        flex: 50%;
-        max-width: 50%;
+    .custom-grid-section img {
+        padding: 10px;
     }
 </style>
 
@@ -10,31 +9,30 @@
     <div class="container">
         <div class="container custom-grid-section">
             <div class="row">
-                <div class="column">
+                <div class="col-8 pr-0">
                     <div class="d-flex">
-                        <div>
+                        <div class="w-100">
                             <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
-                            </div>
-            
-                            <div>
+                        </div>
+                        <div>
                             <div class="text-box">
                                 <p>{{ section.settings.text2 }}</p>
                                 <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
                             </div>
-                            </div>
+                        </div>
                     </div>
                     <div>
-                    <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                        <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid w-100">
                     </div>
 
                 </div>
-                <div class="column">
+                <div class="col-4 pl-0">
                     <div>
-                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
-                        </div>
-                        <div>
-                            <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
-                            </div>
+                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid w-100">
+                    </div>
+                    <div>
+                        <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid w-100">
+                    </div>
                 </div>
             </div>
         </div>
