@@ -1,7 +1,7 @@
 <section>
     <div class="container">
-        <div class="container custom-grid-section">
-            <div class="row">
+        <div class="container d-grid">
+            <div>
                 <div class="col-md-4">
                 <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
                 </div>
@@ -16,9 +16,6 @@
                 <div class="col-md-4">
                 <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
                 </div>
-            </div>
-
-            <div class="row">
                 <div class="col-md-8">
                 <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
                 </div>
