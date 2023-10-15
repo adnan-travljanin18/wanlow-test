@@ -1,35 +1,51 @@
 <section>
-    <div class="container">
-        <div class="container custom-grid-section">
-            <div class="row">
-                <div class="col-md-4">
-                <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+        <div class="container">
+            <div class="container custom-grid-section" id="card-container" data-masonry='{"percentPosition": true }'>
+                <div class="grid-item col-md-4">
+                    <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
                 </div>
 
-                <div class="col-md-4">
-                <div class="text-box">
-                    <p>{{ section.settings.text2 }}</p>
-                    <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
-                </div>
-                </div>
-
-                <div class="col-md-4">
-                <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                <div class="grid-item col-md-4">
+                    <div class="text-box">
+                        <p>{{ section.settings.text2 }}</p>
+                        <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
+                    </div>
                 </div>
 
-                <div class="col-md-6">
-                <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
+                <div class="grid-item col-md-4">
+                    <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
+                </div>
+
+                <div class="grid-item col-md-6">
+                    <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                </div>
+
+                <div class="grid-item col-md-6">
+                    <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize Masonry after all images are loaded
+            var $grid = $('#card-container').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item'
+            });
+
+            // Layout Masonry after each image loads
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+        });
+    </script>
+
 
 {%  schema  %} 
 {
