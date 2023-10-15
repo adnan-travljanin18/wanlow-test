@@ -1,5 +1,5 @@
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3, // Display 3 blocks on desktop
+    slidesPerView: "auto", // Display 3 blocks on desktop
     spaceBetween: 30,
     grabCursor: true,
     simulateTouch: true,
