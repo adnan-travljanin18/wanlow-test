@@ -1,28 +1,67 @@
+<style>
+    .column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
 <section>
     <div class="container">
-        <div class="container d-grid">
-            <div>
-                <div class="col-md-4">
-                <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+        <div class="container custom-grid-section">
+            <div class="row">
+                <div class="column">
+                    <div class="col-md-4">
+                        <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+                        </div>
+        
+                        <div class="col-md-4">
+                        <div class="text-box">
+                            <p>{{ section.settings.text2 }}</p>
+                            <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
+                        </div>
+                        </div>
+                        <div class="col-md-8">
+                        <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                        </div>
+                </div>
+                <div class="column">
+                    <div class="col-md-4">
+                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
+                        </div>
+                        
+        
+                        <div class="col-md-4">
+                        <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
+                        </div>
                 </div>
 
-                <div class="col-md-4">
-                <div class="text-box">
-                    <p>{{ section.settings.text2 }}</p>
-                    <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
-                </div>
-                </div>
-
-                <div class="col-md-4">
-                <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
-                </div>
-                <div class="col-md-8">
-                <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
-                </div>
-
-                <div class="col-md-4">
-                <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
-                </div>
+                
             </div>
         </div>
     </div>
