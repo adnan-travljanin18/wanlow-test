@@ -14,7 +14,6 @@ function initializeSwiper() {
       slidesPerView: slidesPerView,
       spaceBetween: 30,
       grabCursor: true,
-      simulateTouch: true,
       touchRatio: 0.5,
       direction: 'horizontal'
     });
