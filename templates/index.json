@@ -172,6 +172,17 @@
       "settings": {
         "section_title": "Swiper Slider"
       }
+    },
+    "3283774a-63de-43c0-9bed-ff21a1d30bf4": {
+      "type": "custom-grid",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/Group_840.png",
+        "text2": "Test",
+        "button2": "Test",
+        "image2": "shopify:\/\/shop_images\/Group_840.png",
+        "image3": "shopify:\/\/shop_images\/Group_840.png",
+        "image4": "shopify:\/\/shop_images\/Group_840.png"
+      }
     }
   },
   "order": [
@@ -179,6 +190,7 @@
     "a962a6c9-6bc7-48a8-ad82-656d17f6cf64",
     "a747d57c-2853-4378-852c-f774c5025b6e",
     "f796e41c-f720-420c-a0c3-34ecbcc93e56",
-    "8da35cf6-8723-4d32-b672-301cce9db409"
+    "8da35cf6-8723-4d32-b672-301cce9db409",
+    "3283774a-63de-43c0-9bed-ff21a1d30bf4"
   ]
 }
