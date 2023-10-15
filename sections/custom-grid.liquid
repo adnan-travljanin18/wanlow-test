@@ -1,0 +1,70 @@
+<section>
+    <div class="container">
+        <div class="container custom-grid-section">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="{{ section.settings.image1 | asset_url }}" alt="Image 1" class="img-fluid">
+                </div>
+
+                <div class="col-md-4">
+                <div class="text-box">
+                    <p>{{ section.settings.text2 }}</p>
+                    <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
+                </div>
+                </div>
+
+                <div class="col-md-4">
+                <img src="{{ section.settings.image2 | asset_url }}" alt="Image 2" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                <img src="{{ section.settings.image3 | asset_url }}" alt="Image 3" class="img-fluid">
+                </div>
+
+                <div class="col-md-6">
+                <img src="{{ section.settings.image4 | asset_url }}" alt="Image 4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%  schema  %} 
+{
+  "name": "Custom Grid Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Text Content"
+    },
+    {
+      "type": "text",
+      "id": "button2",
+      "label": "Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image 4"
+    }
+  ]
+}
+{% endschema %}
