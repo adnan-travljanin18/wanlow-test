@@ -27,10 +27,10 @@
         "button_link": "shopify:\/\/products\/example-t-shirt"
       }
     },
-    "bdbcc478-8d18-49d3-a487-ab5589307a63": {
-      "type": "test-section",
+    "a393c9df-7935-48c2-acfc-997f14a0c823": {
+      "type": "three-box-section",
       "blocks": {
-        "4e067bad-5834-4f4d-9116-395ad82bb8be": {
+        "f23b0470-b665-4d24-99d2-def053073bfd": {
           "type": "swiper_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
@@ -39,7 +39,7 @@
             "subtitle": ""
           }
         },
-        "6fc92c20-561e-4aaf-a8fb-bcbe26a1d789": {
+        "6342f132-52ba-43f7-84fd-d5b85015983f": {
           "type": "swiper_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
@@ -48,7 +48,7 @@
             "subtitle": ""
           }
         },
-        "69d23573-5c25-4df8-bb3e-6345798746c4": {
+        "e66f2522-1f6f-4177-87d7-a56d79246f92": {
           "type": "swiper_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg",
@@ -59,9 +59,9 @@
         }
       },
       "block_order": [
-        "4e067bad-5834-4f4d-9116-395ad82bb8be",
-        "6fc92c20-561e-4aaf-a8fb-bcbe26a1d789",
-        "69d23573-5c25-4df8-bb3e-6345798746c4"
+        "f23b0470-b665-4d24-99d2-def053073bfd",
+        "6342f132-52ba-43f7-84fd-d5b85015983f",
+        "e66f2522-1f6f-4177-87d7-a56d79246f92"
       ],
       "settings": {
         "section_title": ""
@@ -213,7 +213,7 @@
   },
   "order": [
     "a962a6c9-6bc7-48a8-ad82-656d17f6cf64",
-    "bdbcc478-8d18-49d3-a487-ab5589307a63",
+    "a393c9df-7935-48c2-acfc-997f14a0c823",
     "a747d57c-2853-4378-852c-f774c5025b6e",
     "3283774a-63de-43c0-9bed-ff21a1d30bf4",
     "f796e41c-f720-420c-a0c3-34ecbcc93e56",
