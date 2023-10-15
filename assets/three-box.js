@@ -4,8 +4,6 @@ var swiper = new Swiper('.swiper-container', {
     grabCursor: true,
     simulateTouch: true,
     touchRatio: 0.5,
-    allowSlidePrev: false, // Disable slide navigation on desktop
-    allowSlideNext: false, // Disable slide navigation on desktop
     breakpoints: {
         1024: {
           slidesPerView: 3, // 3 blocks per view on desktop
