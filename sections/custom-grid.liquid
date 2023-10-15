@@ -1,89 +1,69 @@
 <style>
-        /* Add custom styles for Masonry */
-        .grid-item {
-            margin-bottom: 15px; /* Adjust the margin as needed */
+        .custom-grid-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
         }
-        .text-box {
-            margin-top: 10px; /* Adjust the margin as needed */
+
+        .custom-grid-section .col-md-4 {
+            flex: 0 0 calc(33.333% - 15px);
+            max-width: calc(33.333% - 15px);
         }
-        .custom-image {
+
+        .custom-grid-section .col-md-4 img {
             width: 100%;
             height: auto;
+            display: block;
         }
-        .custom-image-2 {
-            width: 100%;
+
+        .custom-grid-section .col-md-4:nth-child(2) img {
+            height: 200px; /* Adjust the height of the second image */
         }
-        .custom-image-3 {
-            width: 100%;
+
+        .custom-grid-section .col-md-4:nth-child(3) img {
+            width: 100px; /* Adjust the width of the third image */
+            height: 150px; /* Adjust the height of the third image */
+        }
+
+        .text-box {
+            height: 200px; /* Set a fixed height for the text box */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     </style>
 
 <section>
         <div class="container">
             <div class="container custom-grid-section">
-                <div class="row" id="card-container1" data-masonry='{"percentPosition": true }'>
-                    <div class="grid-item col-md-4">
-                        <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid custom-image">
-                    </div>
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image1 | image_url }}" alt="Image 1" class="img-fluid">
+                </div>
 
-                    <div class="grid-item col-md-4">
-                        <div class="text-box">
-                            <p>{{ section.settings.text2 }}</p>
-                            <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
-                        </div>
-                    </div>
-
-                    <div class="grid-item col-md-4">
-                        <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid custom-image-2">
+                <div class="col-md-4">
+                    <div class="text-box">
+                        <p>{{ section.settings.text2 }}</p>
+                        <a href="#" class="btn btn-primary">{{ section.settings.button2 }}</a>
                     </div>
                 </div>
 
-                <div class="row" id="card-container2" data-masonry='{"percentPosition": true }'>
-                    <div class="grid-item col-md-8">
-                        <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid custom-image-3">
-                    </div>
-                    <div class="grid-item col-md-4">
-                        <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid custom-image-4">
-                    </div>
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image2 | image_url }}" alt="Image 2" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="container custom-grid-section">
+                <div class="col-md-8">
+                    <img src="{{ section.settings.image3 | image_url }}" alt="Image 3" class="img-fluid">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{{ section.settings.image4 | image_url }}" alt="Image 4" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Initialize Masonry for the first row
-            var $grid1 = $('#card-container1').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item'
-            });
-            $grid1.imagesLoaded().progress(function () {
-                $grid1.masonry('layout');
-            });
-
-            // Initialize Masonry for the second row
-            var $grid2 = $('#card-container2').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item'
-            });
-            $grid2.imagesLoaded().progress(function () {
-                $grid2.masonry('layout');
-            });
-
-            // Initialize Masonry for the third row
-            var $grid3 = $('#card-container3').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item'
-            });
-            $grid3.imagesLoaded().progress(function () {
-                $grid3.masonry('layout');
-            });
-        });
-    </script>
 
 {%  schema  %} 
 {
