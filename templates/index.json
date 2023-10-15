@@ -20,6 +20,7 @@
         "f8bf0778-4782-4c33-b853-729a994beee4",
         "bb959648-8b52-4afb-bb9f-619cab3693b7"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Get Outside!",
         "subtext": "Monthly subscription box designed to get kids excited to spend more time outdoors and less time inside with their digital devices!",
@@ -64,6 +65,7 @@
         "69d23573-5c25-4df8-bb3e-6345798746c4"
       ],
       "settings": {
+        "section_title": ""
       }
     },
     "a747d57c-2853-4378-852c-f774c5025b6e": {
@@ -112,6 +114,7 @@
         "c55465c2-9122-4e87-bd05-309a12ba2b37",
         "36c1f736-02bd-4a40-a921-176dfe741a5e"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Mask_Group_4.png",
         "section_heading": "The Welcome Box",
@@ -121,6 +124,7 @@
     },
     "3283774a-63de-43c0-9bed-ff21a1d30bf4": {
       "type": "custom-grid",
+      "disabled": true,
       "settings": {
         "title": "Outdoor Fun Continues Each Month",
         "subtitle": "Each new box comes with products, activities, and a booklet with learning material and games",
@@ -160,6 +164,7 @@
         "2de58ed5-fd75-48ba-b997-9563e025f763",
         "664df6a6-abb4-4f5c-92d4-141fae713275"
       ],
+      "disabled": true,
       "settings": {
         "section_heading": ""
       }
@@ -205,6 +210,7 @@
         "5c37ad7d-0637-4977-8d2e-80771c688111",
         "5dbe3fa2-6360-42d8-8fa9-b829c00d0c60"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Swiper Slider"
       }
