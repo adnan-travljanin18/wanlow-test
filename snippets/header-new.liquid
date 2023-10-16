@@ -10,32 +10,37 @@
   .header-actions {
     gap: 15px;
   }
-  .menu-links {
-    display: flex;
-    justify-content: flex-end;
-  }
-  #burger-menu {
-      display: none; /* Initially hide the burger menu */
-  }
+  #sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
 
-  #burger-button {
-      display: block; /* Show the burger button */
-  }
+#sidebar .menu-links {
+    padding: 20px;
+}
 
-  /* Media query for screens 768px and below */
-  @media (max-width: 768px) {
-      #normal-menu {
-          display: none; /* Hide the normal menu */
-      }
+#burger-menu {
+    display: block;
+}
 
-      #burger-menu {
-          display: block; /* Show the burger menu */
-      }
+@media (max-width: 768px) {
+    #burger-menu {
+        display: block;
+    }
+}
 
-      #burger-menu .menu-links {
-          display: none; /* Initially hide the links in the burger menu */
-      }
-  }
+@media (max-width: 991px) {
+    .logo-desktop {
+        display: none;
+    }
+}
   @media screen and (max-width:991px){
     .logo-desktop {
       display: none;
@@ -47,65 +52,66 @@
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4">
             <div class="d-lg-none col-12 text-center">
-              <a href="{{ routes.root_url }}">
-                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-              </a>
-            </div>
-            <div class="col-lg-5 col-6 menu-links" id="normal-menu">
-                {% for link in linklists.main-menu.links -%}
-                    {{ link.title | link_to: link.url }}
-                {%- endfor %}
+                <a href="{{ routes.root_url }}">
+                    <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
+                </a>
             </div>
 
             <div id="burger-menu">
-                <button id="burger-button" onclick="toggleBurgerMenu()">☰ Menu</button>
-                <div class="col-lg-5 col-6 menu-links">
+                <button id="burger-button" onclick="toggleSidebar()">☰ Menu</button>
+            </div>
+
+            <div id="sidebar">
+                <div class="col-12 menu-links">
                     {% for link in linklists.main-menu.links -%}
                         {{ link.title | link_to: link.url }}
                     {%- endfor %}
                 </div>
             </div>
+
             <div class="col-lg-2 logo-desktop">
-              <a href="{{ routes.root_url }}">
-                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-              </a>
-            </div>
-            <div class="col-lg-5 col-6 d-flex align-items-center justify-content-end header-actions">
-              {% render "get-started" %}
-              {%- if shop.customer_accounts_enabled -%}
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                  {% render 'icon-account' %}
+                <a href="{{ routes.root_url }}">
+                    <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
                 </a>
-              {%- endif -%}
-              <a href="{{ routes.cart_url }}">
-                {%- liquid
-                  if cart == empty
-                    render 'icon-cart-empty'
-                  else
-                    render 'icon-cart'
-                  endif
-                -%}
-                {%- if cart != empty -%}
-                  <div>
-                    {%- if cart.item_count < 100 -%}
-                      <span aria-hidden="true">{{ cart.item_count }}</span>
-                    {%- endif -%}
-                    <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-                  </div>
+            </div>
+
+            <div class="col-lg-5 col-6 d-flex align-items-center justify-content-end header-actions">
+                {% render "get-started" %}
+                {%- if shop.customer_accounts_enabled -%}
+                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                        {% render 'icon-account' %}
+                    </a>
                 {%- endif -%}
-              </a>
+                <a href="{{ routes.cart_url }}">
+                    {%- liquid
+                        if cart == empty
+                            render 'icon-cart-empty'
+                        else
+                            render 'icon-cart'
+                        endif
+                    -%}
+                    {%- if cart != empty -%}
+                        <div>
+                            {%- if cart.item_count < 100 -%}
+                                <span aria-hidden="true">{{ cart.item_count }}</span>
+                            {%- endif -%}
+                            <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                        </div>
+                    {%- endif -%}
+                </a>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-  function toggleBurgerMenu() {
-    var menu = document.getElementById("burger-menu").getElementsByClassName("menu-links")[0];
-    if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "flex";
+  function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.display === "none" || sidebar.style.display === "") {
+        sidebar.style.display = "block";
     } else {
-        menu.style.display = "none";
+        sidebar.style.display = "none";
     }
 }
+
 </script>
