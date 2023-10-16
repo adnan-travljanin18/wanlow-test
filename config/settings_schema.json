@@ -1371,6 +1371,35 @@
     ]
   },
   {
+    "name": "Social Media Logos",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social Media Logos"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_facebook_logo",
+        "label": "Facebook"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_instagram_logo",
+        "label": "Instagram"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_youtube_logo",
+        "label": "Instagram"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_tiktok_logo",
+        "label": "TikTok"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.search_input.name",
     "settings": [
       {
