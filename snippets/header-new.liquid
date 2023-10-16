@@ -69,7 +69,7 @@
                 {%- endfor %}
             </div>
 
-            <div id="burger-menu" class="col-6 d-md-none">
+            <div id="burger-menu" class="col-3 d-md-none">
               <i class="fas fa-bars" onclick="toggleSidebar()"></i>
               </div>
 
@@ -87,7 +87,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-5 col-6 d-flex align-items-center justify-content-end header-actions">
+            <div class="col-lg-5 col-9 d-flex align-items-center justify-content-end header-actions">
                 {% render "get-started" %}
                 {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
