@@ -8,98 +8,93 @@
     color: #483729;
   }
   .burger-menu {
-    display: none;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: #483729;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Add styles for tablet view */
+@media (max-width: 992px) {
+  .menu-links {
     flex-direction: column;
-    cursor: pointer;
   }
 
-  .burger-menu .bar {
-    width: 25px;
-    height: 3px;
-    margin: 3px 0;
-    background-color: #483729;
+  .burger-menu {
+    display: flex;
   }
 
   .menu-items {
+    display: none;
+  }
+
+  .menu-items.active {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
-
-  /* Add styles for tablet view */
-  @media (max-width: 768px) {
-    .menu-links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .col-5 {
-      width: 100%;
-      text-align: left;
-    }
-
-    .burger-menu {
-      display: flex;
-    }
-
-    .menu-items {
-      display: none;
-    }
-
-    .menu-items.active {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+}
 </style>
 
 <header class="bg-gray">
-  <div class="container">
-    <div class="row justify-content-between align-items-center py-3 px-4">
-      <div class="col-5 menu-links">
-        <div class="burger-menu" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+    <div class="container">
+      <div class="row justify-content-between align-items-center py-3 px-4">
+        <div class="col-2">
+          <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
-        <div class="menu-items" id="menuItems">
-          {% for link in linklists.main-menu.links -%}
-            {{ link.title | link_to: link.url }}
-          {%- endfor %}
+        <div class="col-5 col-md-2">
+          <a href="{{ routes.root_url }}">
+            <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
+          </a>
         </div>
-      </div>
-      <div class="col-5">
-        <a href="{{ routes.root_url }}">
-          <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-        </a>
-      </div>
-      <div class="col-2 d-flex align-items-center justify-content-between">
-        {% render "get-started" %}
-        {%- if shop.customer_accounts_enabled -%}
-          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+        <div class="col-5 col-md-3 d-flex align-items-center justify-content-end">
+          <a href="{%- if shop.customer_accounts_enabled -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
             {% render 'icon-account' %}
           </a>
-        {%- endif -%}
-        <a href="{{ routes.cart_url }}">
-          {%- liquid
-            if cart == empty
-              render 'icon-cart-empty'
-            else
-              render 'icon-cart'
-            endif
-          -%}
-          {%- if cart != empty -%}
-            <div>
-              {%- if cart.item_count < 100 -%}
-                <span aria-hidden="true">{{ cart.item_count }}</span>
-              {%- endif -%}
-              <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-            </div>
-          {%- endif -%}
-        </a>
+          <a href="{{ routes.cart_url }}">
+            {%- liquid
+              if cart == empty
+                render 'icon-cart-empty'
+              else
+                render 'icon-cart'
+              endif
+            -%}
+            {%- if cart != empty -%}
+              <div>
+                {%- if cart.item_count < 100 -%}
+                  <span aria-hidden="true">{{ cart.item_count }}</span>
+                {%- endif -%}
+                <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+              </div>
+            {%- endif -%}
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="menu-items" id="menuItems">
+            {% for link in linklists.main-menu.links -%}
+              {{ link.title | link_to: link.url }}
+            {%- endfor %}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 <script>
   function toggleMenu() {
