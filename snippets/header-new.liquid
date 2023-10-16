@@ -54,6 +54,7 @@
 }
 </style>
 
+
 <section class="bg-gray">
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4" id="header">
@@ -63,7 +64,7 @@
                 </a>
             </div>
 
-            <div class="col-5 menu-links desktop-links">
+            <div class="menu-links desktop-links col-5">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
