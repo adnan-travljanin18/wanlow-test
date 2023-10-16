@@ -39,16 +39,15 @@
       top: 0;
       z-index: 100;
     }
+    .desktop-links {
+      display: none;
+    }
 }
 
 @media (max-width: 991px) {
     .logo-desktop {
         display: none;
     }
-}
-
-.header {
-    padding-right: 270px; /* Adjusted padding for the sidebar */
 }
 </style>
 
@@ -61,7 +60,13 @@
                 </a>
             </div>
 
-            <div id="burger-menu" class="col-6">
+            <div class="col-6 menu-links desktop-links">
+                {% for link in linklists.main-menu.links -%}
+                    {{ link.title | link_to: link.url }}
+                {%- endfor %}
+            </div>
+
+            <div id="burger-menu" class="col-6 d-md-none">
               <i class="fas fa-bars" onclick="toggleSidebar()"></i>
               </div>
 
