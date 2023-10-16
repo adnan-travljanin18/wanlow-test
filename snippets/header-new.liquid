@@ -10,6 +10,11 @@
   .header-actions {
     gap: 15px;
   }
+  @media screen and (max-width:991px){
+    .logo-desktop {
+      display: none;
+    }
+  }
 </style>
 
 <section class="bg-gray">
@@ -25,7 +30,7 @@
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
             </div>
-            <div class="col-2">
+            <div class="col-2 logo-desktop">
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
