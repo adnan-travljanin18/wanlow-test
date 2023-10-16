@@ -10,6 +10,20 @@
   .header-actions {
     gap: 15px;
   }
+  .hidden {
+  display: none;
+}
+
+#burger-menu-icon {
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
   @media screen and (max-width:991px){
     .logo-desktop {
       display: none;
@@ -25,7 +39,7 @@
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
             </div>
-            <div class="col-lg-5 col-6 menu-links">
+            <div class="col-lg-5 col-6 menu-links" id="menu-links">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
@@ -36,7 +50,16 @@
               </a>
             </div>
             <div class="col-lg-5 col-6 d-flex align-items-center justify-content-end header-actions">
-              {% render "get-started" %}
+              <div id="burger-menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div id="mobile-menu" class="hidden">
+                {% for link in linklists.main-menu.links -%}
+                    {{ link.title | link_to: link.url }}
+                {%- endfor %}
+              </div>
               {%- if shop.customer_accounts_enabled -%}
                 <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
                   {% render 'icon-account' %}
@@ -63,3 +86,10 @@
         </div>
     </div>
 </section>
+
+<script>
+function toggleMenu() {
+  var mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('hidden');
+}
+</script>
