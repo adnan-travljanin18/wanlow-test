@@ -7,6 +7,9 @@
     text-decoration: none;
     color: #483729;
   }
+  .header-actions {
+    gap: 15px;
+  }
 </style>
 
 <section class="bg-gray">
@@ -17,12 +20,12 @@
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
             </div>
-            <div class="col-5">
+            <div class="col-2">
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
             </div>
-            <div class="col-2">
+            <div class="col-5 d-flex align-items-center justify-content-end header-actions">
               {% render "get-started" %}
               {%- if shop.customer_accounts_enabled -%}
                 <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
