@@ -15,6 +15,11 @@
 <section class="bg-gray">
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4">
+            <div class="d-lg-none col-12">
+              <a href="{{ routes.root_url }}">
+                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
+              </a>
+            </div>
             <div class="col-5 menu-links">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
