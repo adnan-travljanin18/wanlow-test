@@ -10,109 +10,91 @@
   .header-actions {
     gap: 15px;
   }
-  .hidden {
-  display: none;
-}
-
-#burger-menu-icon {
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-}
   @media screen and (max-width:991px){
     .logo-desktop {
       display: none;
     }
   }
+  @media (min-width: 769px) {
+    .burger-menu-content {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+}
 </style>
 
 <section class="bg-gray">
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4">
             <div class="d-lg-none col-12 text-center">
-              <a href="{{ routes.root_url }}">
-                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-              </a>
-            </div>
-            <div class="col-lg-5 col-6 menu-links" id="menu-links">
-                {% for link in linklists.main-menu.links -%}
-                    {{ link.title | link_to: link.url }}
-                {%- endfor %}
+                <a href="{{ routes.root_url }}">
+                    <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
+                </a>
             </div>
             <div class="col-lg-2 logo-desktop">
-              <a href="{{ routes.root_url }}">
-                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-              </a>
+                <a href="{{ routes.root_url }}">
+                    <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
+                </a>
             </div>
             <div class="col-lg-5 col-6 d-flex align-items-center justify-content-end header-actions">
-              <div id="burger-menu-icon" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-              </div>
-              <div id="mobile-menu" class="hidden">
+                <div class="burger-menu" onclick="toggleBurgerMenu()">
+                    ☰
+                </div>
+                {% render "get-started" %}
+                {%- if shop.customer_accounts_enabled -%}
+                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                        {% render 'icon-account' %}
+                    </a>
+                {%- endif -%}
+                <a href="{{ routes.cart_url }}">
+                    {%- liquid
+                        if cart == empty
+                            render 'icon-cart-empty'
+                        else
+                            render 'icon-cart'
+                        endif
+                    -%}
+                    {%- if cart != empty -%}
+                        <div>
+                            {%- if cart.item_count < 100 -%}
+                                <span aria-hidden="true">{{ cart.item_count }}</span>
+                            {%- endif -%}
+                            <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                        </div>
+                    {%- endif -%}
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 burger-menu-content" id="burger-menu">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
-              </div>
-              {%- if shop.customer_accounts_enabled -%}
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                  {% render 'icon-account' %}
-                </a>
-              {%- endif -%}
-              <a href="{{ routes.cart_url }}">
-                {%- liquid
-                  if cart == empty
-                    render 'icon-cart-empty'
-                  else
-                    render 'icon-cart'
-                  endif
-                -%}
-                {%- if cart != empty -%}
-                  <div>
-                    {%- if cart.item_count < 100 -%}
-                      <span aria-hidden="true">{{ cart.item_count }}</span>
-                    {%- endif -%}
-                    <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-                  </div>
-                {%- endif -%}
-              </a>
             </div>
         </div>
     </div>
 </section>
 
-
 <script>
-function toggleMenu() {
-  var mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('hidden');
+  function toggleBurgerMenu() {
+    var burgerMenuContent = document.getElementById("burger-menu");
+    burgerMenuContent.style.display = (burgerMenuContent.style.display === 'none' || burgerMenuContent.style.display === '') ? 'block' : 'none';
 }
-
-// Function to check window width and toggle burger menu accordingly
-function toggleBurgerMenu() {
-  var screenWidth = window.innerWidth;
-  var mobileMenu = document.getElementById('mobile-menu');
-  var menuLinks = document.getElementById('menu-links');
-
-  if (screenWidth <= 768) {
-    // Display burger menu icon and hide menu links
-    document.getElementById('burger-menu-icon').style.display = 'block';
-    menuLinks.classList.add('hidden');
-  } else {
-    // Hide burger menu icon and display menu links
-    document.getElementById('burger-menu-icon').style.display = 'none';
-    mobileMenu.classList.add('hidden');
-    menuLinks.classList.remove('hidden');
-  }
-}
-
-// Call the function initially and listen for resize events
-toggleBurgerMenu();
-window.addEventListener('resize', toggleBurgerMenu);
 </script>
