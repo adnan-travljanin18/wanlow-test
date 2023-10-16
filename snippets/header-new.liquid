@@ -10,6 +10,32 @@
   .header-actions {
     gap: 15px;
   }
+  .menu-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #burger-menu {
+      display: none; /* Initially hide the burger menu */
+  }
+
+  #burger-button {
+      display: block; /* Show the burger button */
+  }
+
+  /* Media query for screens 768px and below */
+  @media (max-width: 768px) {
+      #normal-menu {
+          display: none; /* Hide the normal menu */
+      }
+
+      #burger-menu {
+          display: block; /* Show the burger menu */
+      }
+
+      #burger-menu .menu-links {
+          display: none; /* Initially hide the links in the burger menu */
+      }
+  }
   @media screen and (max-width:991px){
     .logo-desktop {
       display: none;
@@ -25,10 +51,19 @@
                 <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
               </a>
             </div>
-            <div class="col-lg-5 col-6 menu-links">
+            <div class="col-lg-5 col-6 menu-links" id="normal-menu">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
+            </div>
+
+            <div id="burger-menu">
+                <button id="burger-button" onclick="toggleBurgerMenu()">☰ Menu</button>
+                <div class="col-lg-5 col-6 menu-links">
+                    {% for link in linklists.main-menu.links -%}
+                        {{ link.title | link_to: link.url }}
+                    {%- endfor %}
+                </div>
             </div>
             <div class="col-lg-2 logo-desktop">
               <a href="{{ routes.root_url }}">
@@ -63,3 +98,14 @@
         </div>
     </div>
 </section>
+
+<script>
+  function toggleBurgerMenu() {
+    var menu = document.getElementById("burger-menu").getElementsByClassName("menu-links")[0];
+    if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
