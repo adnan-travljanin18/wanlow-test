@@ -61,11 +61,11 @@
                 </a>
             </div>
 
-            <div id="burger-menu" class="col-6">
+            <div id="burger-menu" class="col-6 d-md-none">
                 <i class="fas fa-bars" onclick="toggleSidebar()"></i>
             </div>
 
-            <div class="col-lg-7 col-md-6 col-12 menu-links">
+            <div class="col-md-6 col-12 menu-links">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
