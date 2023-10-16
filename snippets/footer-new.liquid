@@ -1,6 +1,6 @@
 <section class="bg-danger">
     <div class="container">
-        <div class="row py-[60px]">
+        <div class="row">
             <div class="col-4">
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.footer_logo | image_url }}" width="auto" height="auto">
@@ -19,6 +19,11 @@
                     <img src="{{ settings.social_tiktok_logo | image_url }}">
                 </a>
               </div>
+              <div class="d-flex">
+                <div>© 2022 | Wanlow</div>
+                <div>Privacy Policy</div>
+                <div>Terms & Conditions</div>
+            </div>
             </div>
             <div class="col-3 d-flex flex-column">
                 {% for link in linklists.footer.links -%}
