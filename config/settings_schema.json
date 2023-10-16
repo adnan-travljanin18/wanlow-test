@@ -1390,7 +1390,7 @@
       {
         "type": "image_picker",
         "id": "social_youtube_logo",
-        "label": "Instagram"
+        "label": "Youtube"
       },
       {
         "type": "image_picker",

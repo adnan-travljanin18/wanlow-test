@@ -5,6 +5,20 @@
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.footer_logo | image_url }}" width="auto" height="auto">
               </a>
+              <div class="d-flex">
+                <a href="https://www.instagram.com/">
+                    <img src="{{ settings.social_instagram_logo }}">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="{{ settings.social_facebook_logo }}">
+                </a>
+                <a href="https://www.youtube.com/">
+                    <img src="{{ settings.social_youtube_logo }}">
+                </a>
+                <a href="https://www.tiktok.com/">
+                    <img src="{{ settings.social_tiktok_logo }}">
+                </a>
+              </div>
             </div>
             <div class="col-3 d-flex flex-column">
                 {% for link in linklists.footer.links -%}
