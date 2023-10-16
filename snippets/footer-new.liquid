@@ -1,13 +1,18 @@
 <style>
     .bg-green {
         background-color: #D4ECE8;
+    }
+    .bg-tree {
         background-image: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Group_815.svg?v=1697441963');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
     }
 </style>
 
 <section class="bg-green">
     <div class="container">
-        <div class="row">
+        <div class="row bg-tree">
             <div class="col-4">
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.footer_logo | image_url }}" width="auto" height="auto">
