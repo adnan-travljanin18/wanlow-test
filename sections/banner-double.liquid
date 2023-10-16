@@ -3,6 +3,23 @@
         max-width: 1440px;
         margin: 0 auto;
     }
+    .banner-text {
+        padding: 0 30px;
+        max-width: 600px;
+    }
+    .btn-banner {
+        background-color: #7EC6BC;
+        border-color: #7EC6BC;
+        color: #000;
+        padding: 10px 20px;
+    }
+    .btn-banner:hover {
+        background-color: #629A92;
+        border-color: #7EC6BC;
+    }
+    .container-banner img {
+        filter: brightness(0.7);
+    }
 </style>
 
 <section>
@@ -13,7 +30,7 @@
                     <img src="{{ block.settings.image | image_url }}" alt="Banner" width="100%" height="auto">
                 </div>
             {% endfor %}
-            <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white banner-text">
                 <h1>
                     {{ section.settings.heading }}
                 </h1>
@@ -21,7 +38,7 @@
                     {{ section.settings.subtext }}
                 </p>
                 <a href="{{ section.settings.button_link }}">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary btn-banner">
                         {{ section.settings.button_label }}
                     </button>
                 </a>
