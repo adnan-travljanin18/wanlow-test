@@ -10,16 +10,23 @@
   .header-actions {
     gap: 15px;
   }
-  #sidebar {
+  #header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure the header is above the sidebar */
+}
+
+#sidebar {
     display: none;
     position: fixed;
     top: 50px; /* Adjusted top position to position under the header */
     left: 0;
     height: 100%;
     width: 250px;
-    background-color: #ffffff;
+    background-color: #f9f9f9; /* Adjust background color as needed */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    z-index: 999; /* Ensure the sidebar is above the content and below the header */
 }
 
 #sidebar .menu-links {
@@ -43,7 +50,12 @@
 }
 
 .header {
-    padding-right: 270px;
+    padding-right: 270px; /* Adjusted padding for the sidebar */
+}
+
+/* Add padding to the content to account for the fixed sidebar */
+#content {
+    padding-left: 270px;
 }
 </style>
 
