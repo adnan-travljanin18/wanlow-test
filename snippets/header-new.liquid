@@ -89,6 +89,11 @@
 
 
 <script>
+function toggleMenu() {
+  var mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('hidden');
+}
+
 // Function to check window width and toggle burger menu accordingly
 function toggleBurgerMenu() {
   var screenWidth = window.innerWidth;
