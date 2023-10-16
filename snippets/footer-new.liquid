@@ -1,17 +1,17 @@
 <section class="bg-danger">
     <div class="container">
         <div class="row">
-            <div class="col-auto">
+            <div class="col-4">
+              <a href="{{ routes.root_url }}">
+                <img src="{{ settings.footer_logo | image_url }}" width="auto" height="auto">
+              </a>
+            </div>
+            <div class="col-3 d-flex flex-column">
                 {% for link in linklists.footer.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
             </div>
-            <div class="col-auto">
-              <a href="{{ routes.root_url }}">
-                <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
-              </a>
-            </div>
-            <div class="col-auto">
+            <div class="col-5">
                 <div>
                     {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                     <input type="hidden" name="contact[tags]" value="newsletter">
