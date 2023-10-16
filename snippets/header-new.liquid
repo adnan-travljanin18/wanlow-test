@@ -87,12 +87,27 @@
     </div>
 </section>
 
+
 <script>
-function toggleMenu() {
+// Function to check window width and toggle burger menu accordingly
+function toggleBurgerMenu() {
+  var screenWidth = window.innerWidth;
   var mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('hidden');
-  
   var menuLinks = document.getElementById('menu-links');
-  menuLinks.classList.toggle('hidden');  // Toggle hiding/showing the menu links
+
+  if (screenWidth <= 768) {
+    // Display burger menu icon and hide menu links
+    document.getElementById('burger-menu-icon').style.display = 'block';
+    menuLinks.classList.add('hidden');
+  } else {
+    // Hide burger menu icon and display menu links
+    document.getElementById('burger-menu-icon').style.display = 'none';
+    mobileMenu.classList.add('hidden');
+    menuLinks.classList.remove('hidden');
+  }
 }
+
+// Call the function initially and listen for resize events
+toggleBurgerMenu();
+window.addEventListener('resize', toggleBurgerMenu);
 </script>
