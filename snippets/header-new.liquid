@@ -64,7 +64,7 @@
                 </a>
             </div>
 
-            <div class="menu-links desktop-links col-5">
+            <div class="menu-links desktop-links col-5 col-md-6">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
@@ -88,7 +88,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-5 col-9 d-flex align-items-center justify-content-end header-actions">
+            <div class="col-lg-5 col-md-6 col-sm-9 d-flex align-items-center justify-content-end header-actions">
                 {% render "get-started" %}
                 {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
