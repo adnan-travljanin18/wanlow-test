@@ -5,20 +5,70 @@
     .bg-tree {
         background-image: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Group_815.svg?v=1697441963');
         background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: bottom;
-        padding: 60px 0;
+        background-position: right 0px bottom 10px;
+        padding: 60px 0 0;
     }
+    .social-icons {
+        padding: 30px 0;
+        gap: 30px;
+    }
+    .footer-links {
+        gap: 20px;
+        padding-top: 25px;
+    }
+    .footer-links a {
+        text-decoration: none;
+        color: #483729;
+    }
+    .newsletter-col {
+        padding-top: 25px;
+    }
+    .newsletter-heading {
+        margin-bottom: 15px;
+    }
+    .footer-newsletter-input {
+        width: 100%;
+        max-width: 276px;
+        padding: 8px 10px 10px 10px;
+        border-radius: 5px;
+        border: 1px solid #483729;
+    }
+    @media screen and (max-width:991px) {
+        .footer-main {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            padding: 0;
+        }
+        .footer-logo img {
+            max-width: 200px;
+            width: 100%;
+        }
+        .social-icons {
+            justify-content: center;
+            padding: 15px 0;
+        }
+        .legal-links {
+            flex-direction: column;
+        }
+        .footer-newsletter-input {
+            max-width: 220px;
+        }
+        .footer-links {
+            padding: 0;
+        }
+}
 </style>
 
 <section class="bg-green">
     <div class="container">
-        <div class="row bg-tree">
-            <div class="col-4">
+        <div class="row bg-tree footer-main">
+            <div class="col-lg-4 col-12 footer-logo">
               <a href="{{ routes.root_url }}">
                 <img src="{{ settings.footer_logo | image_url }}" width="auto" height="auto">
               </a>
-              <div class="d-flex">
+              <div class="d-flex social-icons">
                 <a href="https://www.instagram.com/">
                     <img src="{{ settings.social_instagram_logo | image_url }}">
                 </a>
@@ -32,25 +82,27 @@
                     <img src="{{ settings.social_tiktok_logo | image_url }}">
                 </a>
               </div>
-              <div class="d-flex justify-content-between ">
+              <div class="d-flex justify-content-between mb-2 legal-links">
                 <div>© 2022 | Wanlow</div>
                 <div>Privacy Policy</div>
                 <div>Terms & Conditions</div>
             </div>
             </div>
-            <div class="col-3 d-flex flex-column">
+            <div class="col-lg-3 col-12 d-flex flex-column footer-links">
                 {% for link in linklists.footer.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
             </div>
-            <div class="col-5">
+            <div class="col-lg-5 col-12 newsletter-col">
+                <h5 class="newsletter-heading">Sign Up To Receive Exclusive Offers, Content And More!</h5>
                 <div>
-                    {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+                    {%- form 'customer', id: 'ContactFooter', class: 'footer-newsletter' -%}
                     <input type="hidden" name="contact[tags]" value="newsletter">
                     <div>
                         <div>
                         <input
                             id="NewsletterForm--{{ section.id }}"
+                            class="footer-newsletter-input"
                             type="email"
                             name="contact[email]"
                             value="{{ form.email }}"
@@ -62,7 +114,7 @@
                         >
                         <button
                             type="submit"
-                            class="btn-primary"
+                            class="btn btn-primary btn-banner"
                             name="commit"
                             id="Subscribe"
                         >
