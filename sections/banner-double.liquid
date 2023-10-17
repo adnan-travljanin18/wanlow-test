@@ -24,7 +24,7 @@
 
 <section>
     <div class="container-banner">
-        <div class="row position-relative ">
+        <div class="row position-relative m-0">
             {% for block in section.blocks %}
                 <div class="{% if section.blocks.size < 2 %}col-12{% else %}col-6{% endif %} {% if forloop.index == 1 %}col-6-first{% else %}col-6-second{% endif %}">
                     <img src="{{ block.settings.image | image_url }}" alt="Banner" width="100%" height="auto">

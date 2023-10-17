@@ -19,15 +19,71 @@
       height: 100%;
       object-fit: cover;
     }
+    .swiper-button-prev::after {
+      content: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Component_16_6.svg?v=1697547406');
+      width: 30px;
+    }
+    .swiper-button-next {
+      rotate: 180deg;
+    }
+    .swiper-button-next::after {
+      content: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Component_16_6.svg?v=1697547406');
+      width: 30px;
+    }
+    .testimonial-slider {
+      padding: 60px 0;
+    }
+    .testimonial-slider .swiper-slide {
+      padding: 0 40px;
+    }
+    .testimonial-slider .testimonial-text {
+      max-width: 700px;
+    }
+    .rating-stars {
+      margin-bottom: 20px;
+    }
+    .slide-background {
+      background-color: #EAE8E7;
+    }
+    .font-orange {
+      color: #DB7623;
+      font-weight: 500;
+    }
+    @media screen and (min-width:992px) {
+      .testimonial-slider .swiper-button-prev {
+      left: var(--swiper-navigation-sides-offset,60px);
+    }
+    .testimonial-slider .swiper-button-next {
+      right: var(--swiper-navigation-sides-offset,60px);
+    }
+    }
   </style>
 
-<section>
+<section class="bg-gray py-md-5 py-4">
     <div class="container">
-        <div class="swiper testimonial-slider">
+      <div>
+        <h1 class="text-center">{{ section.settings.section_heading }}</h1>
+      </div>
+        <div class="swiper testimonial-slider py-lg-5 py-4">
             <div class="swiper-wrapper">
               {% for block in section.blocks %}
-                <div class="swiper-slide">
-                  {{ block.settings.slide_content }}
+                <div class="swiper-slide flex-column slide-background">
+                    {% case block.type %}
+                      {% when 'slide' %}
+                        <div class="slide d-flex rating-stars" {{ block.shopify_attributes }}>
+                          {% assign num_images = block.settings.rating | plus: 0 %}
+                          {% if num_images > 0 %}
+                            {% for i in (1..num_images) %}
+                              <img src="https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Icon_feather-star.svg?v=1697538952" alt="Image {{ i }}" />
+                            {% endfor %}
+                          {% else %}
+                            <p>No rating selected.</p>
+                          {% endif %}
+                        </div>
+                    {% endcase %}
+
+                  <blockquote class="testimonial-text">{{ block.settings.slide_content }}</blockquote>
+                  <p class="font-orange">- {{ block.settings.person_name }}</p>
                 </div>
               {% endfor %}
             </div>
@@ -57,9 +113,41 @@
                 "type": "slide",
                 "settings": [
                     {
+                        "type": "select",
+                        "id": "rating",
+                        "label": "Star Rating",
+                        "options": [
+                          {
+                            "value": "1",
+                            "label": "1"
+                          },
+                          {
+                            "value": "2",
+                            "label": "2"
+                          },
+                          {
+                            "value": "3",
+                            "label": "3"
+                          },
+                          {
+                            "value": "4",
+                            "label": "4"
+                          },
+                          {
+                            "value": "5",
+                            "label": "5"
+                          }
+                        ]
+                    },
+                    {
                         "type": "text",
                         "id": "slide_content",
                         "label": "Add Testimonial"
+                    },
+                    {
+                        "type": "text",
+                        "id": "person_name",
+                        "label": "Name of Testimonial"
                     }
                 ]
             }
