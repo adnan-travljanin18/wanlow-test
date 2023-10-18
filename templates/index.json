@@ -140,19 +140,25 @@
         "28a40431-1de6-4a7c-bf76-f362cf413c74": {
           "type": "slide",
           "settings": {
-            "slide_content": "Test1"
+            "rating": "5",
+            "slide_content": "“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. “",
+            "person_name": "David C."
           }
         },
         "2de58ed5-fd75-48ba-b997-9563e025f763": {
           "type": "slide",
           "settings": {
-            "slide_content": "Test2"
+            "rating": "5",
+            "slide_content": "“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. “",
+            "person_name": "David B."
           }
         },
         "664df6a6-abb4-4f5c-92d4-141fae713275": {
           "type": "slide",
           "settings": {
-            "slide_content": "Test"
+            "rating": "3",
+            "slide_content": "“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. “",
+            "person_name": "David A."
           }
         }
       },
@@ -162,7 +168,7 @@
         "664df6a6-abb4-4f5c-92d4-141fae713275"
       ],
       "settings": {
-        "section_heading": ""
+        "section_heading": "What Are Our Adventurers Saying"
       }
     },
     "8da35cf6-8723-4d32-b672-301cce9db409": {
@@ -171,31 +177,31 @@
         "b4df095f-8b02-498c-a515-930d852b93d0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_840.png"
+            "image": "shopify:\/\/shop_images\/Group_836.png"
           }
         },
         "3e6635d3-1315-433e-9e8d-4efd861a786a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_840.png"
+            "image": "shopify:\/\/shop_images\/Group_837.png"
           }
         },
         "464876c6-b406-40e8-acec-a609ae385a06": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_840.png"
+            "image": "shopify:\/\/shop_images\/Group_836.png"
           }
         },
         "5c37ad7d-0637-4977-8d2e-80771c688111": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_838.png"
+            "image": "shopify:\/\/shop_images\/Group_837.png"
           }
         },
         "5dbe3fa2-6360-42d8-8fa9-b829c00d0c60": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_839.png"
+            "image": "shopify:\/\/shop_images\/Group_836.png"
           }
         }
       },
@@ -207,7 +213,9 @@
         "5dbe3fa2-6360-42d8-8fa9-b829c00d0c60"
       ],
       "settings": {
-        "section_title": "Swiper Slider"
+        "section_title": "Join Our Community!",
+        "button_text": "Follow Us",
+        "button_url": "https:\/\/instagram.com"
       }
     }
   },
