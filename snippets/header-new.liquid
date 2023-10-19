@@ -13,7 +13,7 @@
   #sidebar {
     display: none;
     position: fixed;
-    top: 122px;
+    top: 132px;
     left: 0;
     height: 100%;
     width: 250px;
@@ -39,6 +39,9 @@
       top: 0;
       z-index: 100;
     }
+    .spacing-logo {
+        margin-bottom: 10px;
+    }
     
 }
 @media (max-width: 767px) {
@@ -58,7 +61,7 @@
 <section class="bg-gray header-section">
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4" id="header">
-            <div class="d-lg-none col-12 text-center">
+            <div class="d-lg-none col-12 text-center spacing-logo">
                 <a href="{{ routes.root_url }}">
                     <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
                 </a>

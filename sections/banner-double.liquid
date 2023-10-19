@@ -20,6 +20,15 @@
     .container-banner img {
         filter: brightness(0.7);
     }
+    @media screen and (max-width:991px) {
+        .banner-subtitle {
+            font-size: 12px;
+        }
+        .btn-text {
+            font-size: 12px;
+            padding: 10px;
+        }
+    }
 </style>
 
 <section class="bg-gray">
@@ -34,11 +43,11 @@
                 <h1>
                     {{ section.settings.heading }}
                 </h1>
-                <p>
+                <p class="banner-subtitle">
                     {{ section.settings.subtext }}
                 </p>
                 <a href="{{ section.settings.button_link }}">
-                    <button class="btn btn-primary btn-banner">
+                    <button class="btn btn-primary btn-banner btn-text">
                         {{ section.settings.button_label }}
                     </button>
                 </a>
