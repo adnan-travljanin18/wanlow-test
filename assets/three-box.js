@@ -1,28 +1,21 @@
-function initializeSwiper() {
-    var screenWidth = window.innerWidth;
-    var slidesPerView;
-
-    if (screenWidth >= 1024) {
-      slidesPerView = 3;
-    } else if (screenWidth >= 768) {
-      slidesPerView = 2;
-    } else {
-      slidesPerView = 1;
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,  // Show 3 slides per view on tablets (width >= 768px)
+      },
+      0: {
+        slidesPerView: 1,  // Show 2 slides per view on mobile (width >= 576px)
+      }
     }
-
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: slidesPerView,
-      spaceBetween: 30,
-      grabCursor: true,
-      touchRatio: 0.5,
-      direction: 'horizontal'
-    });
-  }
-
-  // Initialize Swiper on page load
-  initializeSwiper();
-
-  // Re-initialize Swiper on window resize
-  window.addEventListener('resize', function() {
-    initializeSwiper();
   });
+});

@@ -1,11 +1,24 @@
-<section>
+<style>
+  .image-slider-wrapper {
+    max-width: 250px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .three-box {
+    padding: 60px 0;
+  }
+</style>
+
+<section class="bg-gray three-box">
   <div class="container">
       <h1 class="text-center">{{ section.settings.section_title }}</h1>
       <div class="swiper-container overflow-hidden">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper card-wrapper">
         {% for block in section.blocks %}
-          <div class="swiper-slide d-block">
-            <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.alt }}">
+          <div class="swiper-slide d-block custom-card">
+            <div class="image-slider-wrapper">
+              <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.alt }}">
+            </div>
             <div class="content">
               <h1>{{ forloop.index }}</h1>
               <h3>{{ block.settings.headline }}</h3>

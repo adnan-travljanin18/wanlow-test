@@ -1,29 +1,66 @@
-<section>
+<style>
+  .btn-orange {
+    background-color: #DC7622;
+    border-color: #DC7622;
+    padding: 10px 20px;
+  }
+  .btn-orange:hover {
+    background-color: #C96D22;
+    border-color: #DC7622;
+  }
+  .image-text-section {
+    padding: 60px 0;
+  }
+  @media screen and (max-width:991px){
+    .image-text-section {
+      padding: 30px 0;
+    }
+    .column-row {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .text-content {
+      padding-top: 20px;
+    }
+    .text-content .content-text-heading {
+      justify-content: center;
+    }
+    .text-content .content-text-subtitle, .text-content-button {
+      text-align: center;
+    }
+  }
+</style>
+
+<section class="bg-gray image-text-section">
   <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h1>{{ section.settings.section_heading }}<span><img src="{{ section.settings.three_stars | image_url }}" alt="three stars"></span></h1>
-        <p>{{ section.settings.section_text }}</p>
+    <div class="row column-row align-items-center">
+      <div class="col-12 col-lg-6 text-content">
+        <div class="d-flex align-items-center content-text-heading gap-2 mb-3">
+          <h1 class="m-0">{{ section.settings.section_heading }}</h1>
+          <img src="{{ section.settings.three_stars | image_url }}" alt="three stars">
+        </div>
+        <p class="content-text-subtitle">{{ section.settings.section_text }}</p>
         
-        <!-- Loop through blocks -->
         {% for block in section.blocks %}
           {% unless block.settings.list_decoration == blank or block.settings.list_item == blank %}
             <div>
-              <div>
-                <p><span><img src="{{ block.settings.list_decoration | image_url }}" alt="star"></span> {{ block.settings.list_item }}</p>
+              <div class="d-flex gap-2 mb-4">
+                <img src="{{ block.settings.list_decoration | image_url }}" alt="star">
+                <p class="m-0">{{ block.settings.list_item }}</p>
               </div>
             </div>
           {% endunless %}
           {% unless block.settings.button_text == blank or block.settings.button_link == blank %}
-            <a href="{{ block.settings.button_link }}">
-              <button>{{ block.settings.button_text }}</button>
-            </a>
+            <div class="text-content-button">
+              <a href="{{ block.settings.button_link }}">
+                <button class="btn btn-secondary btn-orange">{{ block.settings.button_text }}</button>
+              </a>
+            </div>
           {% endunless %}
         {% endfor %}
-        <!-- End block loop -->
 
       </div>
-      <div class="col-6">
+      <div class="col-8 col-lg-6">
         <img src="{{ section.settings.image |  image_url  }}" alt="Big Image" class="w-100">
       </div>
     </div>
