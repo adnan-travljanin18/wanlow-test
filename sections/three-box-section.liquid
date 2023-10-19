@@ -1,17 +1,50 @@
 <style>
   .image-slider-wrapper {
     max-width: 250px;
+    max-height: 250px;
     margin: 0 auto;
     padding-top: 30px;
   }
+  .image-slider-wrapper img {
+    border-radius: 15px;
+  }
   .three-box {
     padding: 60px 0;
+  }
+  .custom-card {
+    height: 500px;
+    border-radius: 5px;
+  }
+  .content {
+    padding: 0 30px;
+    position: relative;
+    bottom: 70px;
+  }
+  .content .number {
+    font-size: 102px;
+    color: #7EC6BC;
+  }
+  .first {
+    transform: rotate(355deg);
+  }
+  .second {
+    transform: rotate(5deg);
+  }
+  .third {
+    transform: rotate(355deg);
+  }
+  .content h5 {
+    margin-bottom: 20px;
+  }
+  .content p {
+    font-size: 16px;
+    margin: 0;
   }
 </style>
 
 <section class="bg-gray three-box">
   <div class="container">
-      <h1 class="text-center">{{ section.settings.section_title }}</h1>
+      <h1 class="text-center m-5">{{ section.settings.section_title }}</h1>
       <div class="swiper-container overflow-hidden">
       <div class="swiper-wrapper card-wrapper">
         {% for block in section.blocks %}
@@ -20,8 +53,8 @@
               <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.alt }}">
             </div>
             <div class="content">
-              <h1>{{ forloop.index }}</h1>
-              <h3>{{ block.settings.headline }}</h3>
+              <div class="number{% if forloop.index == 1 %} first{% elsif forloop.index == 2 %} second{% elsif forloop.index == 3 %} third{% endif %}">{{ forloop.index }}</div>
+              <h5>{{ block.settings.headline }}</h5>
               <p>{{ block.settings.subtitle }}</p>
             </div>
           </div>
