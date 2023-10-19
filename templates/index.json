@@ -101,7 +101,7 @@
         "36c1f736-02bd-4a40-a921-176dfe741a5e": {
           "type": "button",
           "settings": {
-            "button_text": "Test",
+            "button_text": "Get Your First Box",
             "button_link": "shopify:\/\/products\/example-t-shirt"
           }
         }
