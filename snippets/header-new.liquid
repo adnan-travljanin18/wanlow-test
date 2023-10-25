@@ -1,97 +1,37 @@
-<style>
-  .bg-gray {
-    background-color: #EAE8E7;
-  }
-  .menu-links a {
-    padding: 0 20px;
-    text-decoration: none;
-    color: #483729;
-  }
-  .header-actions {
-    gap: 15px;
-  }
-  #sidebar {
-    display: none;
-    position: fixed;
-    top: 132px;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-}
-
-#sidebar .menu-links {
-    padding: 20px;
-}
-
-#burger-menu {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    #burger-menu {
-        display: block;
-    }
-    .header-section {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .spacing-logo {
-        margin-bottom: 10px;
-    }
-    
-}
-@media (max-width: 767px) {
-    .desktop-links {
-      display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .logo-desktop {
-        display: none;
-    }
-}
-</style>
-
-
 <section class="bg-gray header-section">
     <div class="container">
         <div class="row justify-content-between align-items-center py-3 px-4" id="header">
-            <div class="d-lg-none col-12 text-center spacing-logo">
+            <div class="d-lg-none col-12 text-center mb-lg-0 mb-3">
                 <a href="{{ routes.root_url }}">
                     <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
                 </a>
             </div>
 
-            <div class="menu-links desktop-links col-lg-5 col-md-6">
+            <div class="menu-links d-md-block d-none col-lg-5 col-md-6">
                 {% for link in linklists.main-menu.links -%}
                     {{ link.title | link_to: link.url }}
                 {%- endfor %}
             </div>
 
-            <div id="burger-menu" class="col-3 d-md-none">
+            <div id="burger-menu" class="col-3 d-md-none d-block">
               <i class="fas fa-bars" onclick="toggleSidebar()"></i>
               </div>
 
             <div id="sidebar">
-                <div class="col-12 menu-links d-flex flex-column">
+                <div class="col-12 menu-links d-flex flex-column p-3">
                     {% for link in linklists.main-menu.links -%}
                         {{ link.title | link_to: link.url }}
                     {%- endfor %}
                 </div>
             </div>
 
-            <div class="col-lg-2 logo-desktop">
+            <div class="col-lg-2 d-lg-block d-none">
                 <a href="{{ routes.root_url }}">
                     <img src="{{ settings.logo | image_url }}" width="auto" height="auto">
                 </a>
             </div>
 
-            <div class="col-lg-5 col-md-6 col-9 d-flex align-items-center justify-content-end header-actions">
+            <div class="col-lg-5 col-md-6 col-9 d-flex align-items-center justify-content-end gap-3">
                 {% render "get-started" %}
                 {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">

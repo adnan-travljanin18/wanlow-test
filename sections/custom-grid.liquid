@@ -1,54 +1,14 @@
-<style>
-  .grid-section {
-    padding: 60px 0;
-  }
-
-  .custom-grid-section img {
-    padding: 10px;
-  }
-  .middle-text {
-    background-color: #fff;
-    padding: 60px 40px;
-    border-radius: 5px;
-    max-width: 400px;
-    max-height: 300px;
-  }
-  
-  @media screen and (min-width:992px) {
-    .middle-text {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    }
-    .custom-grid-section .column-padding-right {
-        padding-right: 0;
-    }
-    .custom-grid-section .column-padding-left {
-        padding-left: 0;
-    }
-  }
-
-  @media screen and (max-width:991px) {
-    .column-grid {
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-  }
-</style>
-
-
 <section class="bg-green grid-section">
     <div class="container">
         <div class="headline text-center">
-            <h1>
+            <h2 class="h1">
                 {{ section.settings.title }}
-            </h1>
+            </h2>
             <p>
                 {{ section.settings.subtitle }}
             </p>
         </div>
-        <div class="container custom-grid-section">
+        <div class="custom-grid-section">
             <div class="row">
                 <div class="col-12 col-lg-8 column-padding-right">
                     <div class="d-flex column-grid">

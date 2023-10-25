@@ -1,0 +1,349 @@
+/* Global css */
+
+.btn {
+    padding: 0.5rem 1rem;
+}
+.btn-primary {
+    background-color: #7EC6BC;
+    border-color: #7EC6BC;
+    color: #000;
+}
+.btn-primary:hover {
+    background-color: #629A92;
+    border-color: #7EC6BC;
+}
+.btn-secondary {
+    background-color: #DC7622;
+    border-color: #DC7622;
+}
+.btn-secondary:hover {
+    background-color: #C96D22;
+    border-color: #DC7622;
+}
+.bg-gray {
+    background-color: #EAE8E7;
+}
+.bg-green {
+    background-color: #D4ECE8;
+}
+.max-height-677 {
+    max-height: 677px;
+}
+
+/* Header css */
+
+.menu-links a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #483729;
+}
+#sidebar {
+    display: none;
+    position: fixed;
+    top: 132px;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+@media (max-width: 768px) {
+    
+    .header-section {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+}
+
+/* Banner Double Section css */
+
+.double-banner-section .banner-text {
+    max-width: 600px;
+}
+.double-banner-section .brigthness-0-7 {
+    filter: brightness(0.7);
+}
+@media screen and (max-width:991px) {
+    .banner-subtitle {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .btn-text {
+        font-size: 12px;
+    }
+}
+
+/* Three box section css */
+
+.image-slider-wrapper {
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.image-slider-wrapper img {
+    border-radius: 15px;
+}
+.three-box {
+    padding: 60px 0;
+}
+.custom-card {
+    height: 500px;
+    border-radius: 5px;
+}
+.content {
+    padding: 0 30px;
+    position: relative;
+    bottom: 70px;
+}
+.content .number {
+    font-size: 102px;
+    color: #7EC6BC;
+}
+.first {
+    transform: rotate(355deg);
+}
+.second {
+    transform: rotate(5deg);
+}
+.third {
+    transform: rotate(355deg);
+}
+.content h5 {
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Welcome Box section css */
+
+
+.image-text-section {
+    padding: 60px 0;
+}
+@media screen and (max-width:991px){
+    .image-text-section {
+        padding: 30px 0;
+    }
+    .column-row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .text-content {
+        padding-top: 20px;
+    }
+    .text-content .content-text-heading {
+        justify-content: center;
+    }
+    .text-content .content-text-subtitle, .text-content-button {
+        text-align: center;
+    }
+}
+
+/* Grid section css */
+
+.grid-section {
+    padding: 60px 0;
+}
+.custom-grid-section img {
+    padding: 10px;
+}
+.middle-text {
+    background-color: #fff;
+    padding: 60px 40px;
+    border-radius: 5px;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+@media screen and (min-width:992px) {
+    .middle-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .custom-grid-section .column-padding-right {
+        padding-right: 0;
+    }
+    .custom-grid-section .column-padding-left {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .column-grid {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+/* Testimonial slider section css */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-prev::after {
+    content: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Component_16_6.svg?v=1697547406');
+    width: 30px;
+}
+.swiper-button-next {
+    rotate: 180deg;
+}
+.swiper-button-next::after {
+    content: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Component_16_6.svg?v=1697547406');
+    width: 30px;
+}
+.testimonial-slider {
+    padding: 60px 0;
+}
+.testimonial-slider .swiper-slide {
+    padding: 0 40px;
+}
+.testimonial-slider .testimonial-text {
+    max-width: 700px;
+}
+.rating-stars {
+    margin-bottom: 20px;
+}
+.slide-background {
+    background-color: #EAE8E7;
+}
+.font-orange {
+    color: #DB7623;
+    font-weight: 500;
+}
+@media screen and (min-width:992px) {
+    .testimonial-slider .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset,60px);
+    }
+    .testimonial-slider .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset,60px);
+    }
+}
+
+/* Instagram slider section css */
+
+.custom-swiper-container .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-swiper-container .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-swiper-container .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.custom-swiper-container a {
+    text-decoration: none;
+}
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #7EC6BC;
+    border-color: #7EC6BC;
+    color: #000;
+    padding: 10px 20px;
+}
+.instagram-button svg {
+    width: 22px;
+    height: 25px;
+}
+.instagram-button:hover {
+    color: #fff;
+    background-color: #629A92;
+    border-color: #7EC6BC;
+}
+
+/* Footer css */
+
+.bg-tree {
+    background-image: url('https://cdn.shopify.com/s/files/1/0833/1794/8730/files/Group_815.svg?v=1697441963');
+    background-repeat: no-repeat;
+    background-position: right 0px bottom 10px;
+    padding: 60px 0 0;
+}
+.social-icons {
+    padding: 30px 0;
+    gap: 30px;
+}
+.footer-links {
+    gap: 20px;
+    padding-top: 25px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #483729;
+}
+.newsletter-col {
+    padding-top: 25px;
+}
+.newsletter-heading {
+    margin-bottom: 15px;
+}
+.footer-newsletter-input {
+    width: 100%;
+    max-width: 276px;
+    padding: 8px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #483729;
+}
+@media screen and (max-width:991px) {
+    .footer-main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 0;
+    }
+    .footer-logo img {
+        max-width: 200px;
+        width: 100%;
+    }
+    .social-icons {
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .legal-links {
+        flex-direction: column;
+    }
+    .footer-newsletter-input {
+        max-width: 220px;
+    }
+    .footer-links {
+        padding: 0;
+    }
+}
